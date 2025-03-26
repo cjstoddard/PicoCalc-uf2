@@ -1,4 +1,4 @@
-'ssd1963-bme280.bas
+'PicoCalc-bme280.bas
 
 ' Based on code written by matherp at TheBackShed.com Forums
 ' https://www.thebackshed.com/forum/ViewTopic.php?TID=8362
@@ -6,6 +6,14 @@
 ' https://github.com/kwinter745321/PicoDisplay
 ' MIT License
 ' MMBASIC 5.08
+
+Const BLK=RGB(BLACK)
+Const WHT=RGB(WHITE)
+Const YLW=RGB(YELLOW)
+Const GRN=RGB(GREEN)
+Const RED=RGB(RED)
+Const BLU=RGB(BLUE)
+Const CYA=RGB(CYAN)
 
 Const BME280_ADDRESS = &H76
 Const BME280_REGISTER_T1 = &H88
@@ -18,14 +26,6 @@ Const BME280_REGISTER_CONTROL = &HF4
 Const BME280_REGISTER_PRESSUREDATA = &HF7
 Const BME280_REGISTER_TEMPDATA = &HFA
 Const BME280_REGISTER_HUMIDDATA = &HFD
-
-Const BLK=RGB(BLACK)
-Const WHT=RGB(WHITE)
-Const YLW=RGB(YELLOW)
-Const GRN=RGB(GREEN)
-Const RED=RGB(RED)
-Const BLU=RGB(BLUE)
-Const CYA=RGB(CYAN)
 
 Dim INTEGER s16=&HFFFFFFFFFFFF0000 , s16b=&H8000
 Dim INTEGER s12=&HFFFFFFFFFFFFF000 , s12b=&H800

@@ -1,4 +1,4 @@
-'ssd1963-dht22-2.bas
+'PicoCalc-dht22-2.bas
 
 ' Based on code written by KW Services.
 ' https://github.com/kwinter745321/PicoDisplay

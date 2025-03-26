@@ -1,14 +1,16 @@
-'ssd1963-dht22.bas
+'PicoCalc-dht22.bas
 
 ' Copyright (C) 2024 Chris Stoddard
 ' MIT License
 ' MMBASIC 5.08
 
+Const BLK=RGB(BLACK)
 Const WHT=RGB(WHITE)
 Const YLW=RGB(YELLOW)
 Const GRN=RGB(GREEN)
 Const RED=RGB(RED)
 Const BLU=RGB(BLUE)
+Const CYA=RGB(CYAN)
 
 Dim FLOAT temp, humidity
 
