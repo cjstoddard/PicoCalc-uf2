@@ -1,5 +1,5 @@
 # PicoCalc-uf2
-I am compiling all the uf2 files from the PicoCalc github so you don't have to.
+I compiled all the uf2 files from the PicoCalc github so you don't have to.
 
 uLisp is not done yet, I am still working on it.
 
