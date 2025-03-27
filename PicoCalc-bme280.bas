@@ -1,4 +1,4 @@
-'PicoCalc-bme280.bas
+'picocalc-bme280.bas
 
 ' Based on code written by matherp at TheBackShed.com Forums
 ' https://www.thebackshed.com/forum/ViewTopic.php?TID=8362
@@ -6,14 +6,6 @@
 ' https://github.com/kwinter745321/PicoDisplay
 ' MIT License
 ' MMBASIC 5.08
-
-Const BLK=RGB(BLACK)
-Const WHT=RGB(WHITE)
-Const YLW=RGB(YELLOW)
-Const GRN=RGB(GREEN)
-Const RED=RGB(RED)
-Const BLU=RGB(BLUE)
-Const CYA=RGB(CYAN)
 
 Const BME280_ADDRESS = &H76
 Const BME280_REGISTER_T1 = &H88
@@ -27,6 +19,14 @@ Const BME280_REGISTER_PRESSUREDATA = &HF7
 Const BME280_REGISTER_TEMPDATA = &HFA
 Const BME280_REGISTER_HUMIDDATA = &HFD
 
+Const BLK=RGB(BLACK)
+Const WHT=RGB(WHITE)
+Const YLW=RGB(YELLOW)
+Const GRN=RGB(GREEN)
+Const RED=RGB(RED)
+Const BLU=RGB(BLUE)
+Const CYA=RGB(CYAN)
+
 Dim INTEGER s16=&HFFFFFFFFFFFF0000 , s16b=&H8000
 Dim INTEGER s12=&HFFFFFFFFFFFFF000 , s12b=&H800
 Dim INTEGER s8= &HFFFFFFFFFFFFFF00 , s8b=&H80
@@ -35,149 +35,133 @@ Dim INTEGER P1,P2,P3,P4,P5,P6,P7,P8,P9
 Dim INTEGER H1,H2,H3,H4,H5,H6
 Dim INTEGER t_fine
 
+' This is the GPIO pins for the BME280, these will need 
+' to be adjusted for the available PicoCalc pins.
 SetPin GP26, GP27, I2C2
-RTC GETTIME
 GUI DELETE ALL
 Font 5
 Colour BLK,WHT
 CLS WHT
 
+' The size and placement of these controls will need
+' to be adjusted for the PicoCalc of 320(H)x480(V)
 GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
-GUI CAPTION #2, "Temperature", 280, 50, LT, BLK, WHT
-GUI CAPTION #3, "Humidity", 565, 50, LT, BLK, WHT
-GUI GAUGE #4,400,200,100,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
+GUI CAPTION #2, "Temperature", 30, 50, LT, BLK, WHT
+GUI CAPTION #3, "Humidity", 300, 50, LT, BLK, WHT
+GUI GAUGE #4,150,200,100,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
 ' If you want temperature in Celsius, Comment out the previous line
 ' and uncomment the next line.
-'GUI GAUGE #4,400,200,100,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
-GUI GAUGE #5,640,200,100,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
-GUI CAPTION #6, "States:", 50, 100, LT, BLK, WHT
-GUI LED #7, "Running", 70, 180, 20, GRN
-GUI LED #8, "Resting", 70, 230, 20, RED
-GUI CAPTION #9, Time$, 50, 450, LT, BLK, WHT
-GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYATemperature in Celsius, comment out the
-GUI GAUGE #11,400,375,100,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
-GUI CAPTION #12, "Pressure", 550, 350, LT, BLK, WHT
-
-CtrlVal(#7) = 0
-CtrlVal(#8) = 1
+'GUI GAUGE #4,150,200,100,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
+GUI GAUGE #5,375,200,100,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
+' GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYA
+GUI GAUGE #11,150,375,100,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
+GUI CAPTION #12, "Pressure", 285, 350, LT, BLK, WHT
 
 bme280_init
 
 Do
-  btn = CtrlVal(#10)
-
-  If btn = 1 Then
-    CLS BLK
-    Exit
-  Else
-    temp_c = bme280_read_temp()
-    temp_f = (temp_c * 1.8) + 32
-    CtrlVal(#4) = temp_f
-    ' If you want Temperature in Celsius, comment out the
-    ' previous 3 lines and uncomment the next line.
-    'CtrlVal(#4) = bme280_read_temp()
-    CtrlVal(#5) = bme280_read_humidity()
-    CtrlVal(#11) = bme280_read_pressure()
-    CtrlVal(#9) = Time$
-    CtrlVal(#7) = 0
-    CtrlVal(#8) = 1
-    CPU SLEEP 0.5
-    CtrlVal(#7) = 1
-    CtrlVal(#8) = 0
-  EndIf
+  temp_c = bme280_read_temp()
+  temp_f = (temp_c * 1.8) + 32
+  CtrlVal(#4) = temp_f
+  ' If you want Temperature in Celsius, comment out the
+  ' previous 3 lines and uncomment the next line.
+  'CtrlVal(#4) = bme280_read_temp()
+  CtrlVal(#5) = bme280_read_humidity()
+  CtrlVal(#11) = bme280_read_pressure()
+  CPU SLEEP 0.5
 Loop
 
-end
+End
 
-function bme280_read_temp() as float
-  local integer var1,var2,adc_T
-  local adc%(2)
+Function bme280_read_temp() As float
+  Local integer var1,var2,adc_T
+  Local adc%(2)
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_TEMPDATA
   I2C2 read BME280_ADDRESS,0,3,adc%()
-  adc_T=((adc%(0)<<16) OR (adc%(1)<<8) or adc%(2))>>4
+  adc_T=((adc%(0)<<16) Or (adc%(1)<<8) Or adc%(2))>>4
   var1 = ((((adc_T>>3) - (T1 <<1))) * T2) \ q(11)
-  var2 = (((((adc_T>>4) - (T1)) * ((adc_T\ q(4)) - (T1))) \ q(12)) * (T3)) \ q(14)
+  var2 = (((((adc_T>>4) - (T1)) * ((adc_T\ q(4)) - (T1))) \ q(12)) * (T3)) \ q(1
   t_fine = var1 + var2
   bme280_read_temp = ((t_fine * 5 + 128) \ q(8))/100.0
-end function
+End Function
 
-function bme280_read_pressure() as float
-  local integer var1, var2, adc_P, p
-  local adc%(2)
+Function bme280_read_pressure() As float
+  Local integer var1, var2, adc_P, p
+  Local adc%(2)
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_PRESSUREDATA
   I2C2 read BME280_ADDRESS,0,3,adc%()
-  adc_P=((adc%(0)<<16) OR (adc%(1)<<8) or adc%(2))>>4
+  adc_P=((adc%(0)<<16) Or (adc%(1)<<8) Or adc%(2))>>4
   var1 = t_fine - 128000
   var2 = var1 * var1 * P6
   var2 = var2 + ((var1 * P5)<<17)
   var2 = var2 + (P4 << 35)
   var1 = ((var1 * var1 * P3)\ q(8)) + ((var1 * P2)<<12)
   var1 = ((1<<47)+var1)*P1\ q(33)
-  if var1 = 0 THEN
+  If var1 = 0 Then
     bme280_read_pressure = 0
-  exit function
-  endif
+  Exit Function
+  EndIf
   p = 1048576 - adc_P
   p = (((p<<31) - var2)*3125) \ var1
   var1 = (P9 * (p\ q(13)) * (p\ q(13))) \ q(25)
   var2 = (P8 * p) \ q(19)
   p = ((p + var1 + var2) \ q(8)) + (P7<<4)
   bme280_read_pressure = p/25600.0
-end function
+End Function
 
-function bme280_read_humidity() as float
-  local integer v_x1,adc_H
-  local adc%(1)
+Function bme280_read_humidity() As float
+  Local integer v_x1,adc_H
+  Local adc%(1)
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_HUMIDDATA
   I2C2 read BME280_ADDRESS,0,2,adc%()
-  adc_H=(adc%(0)<<8) or adc%(1)
+  adc_H=(adc%(0)<<8) Or adc%(1)
   v_x1 = t_fine - 76800
-  v_x1=(((((adc_H<<14)-((H4)<<20)-(H5*v_x1))+16384)\ q(15))*(((((((v_x1*H6)\ q(10))*(((v_x1*H3)\ q(11))+32768))\ q(10))+2097152)*H2+8192)\ q(14)))
+  v_x1=(((((adc_H<<14)-((H4)<<20)-(H5*v_x1))+16384)\ q(15))*(((((((v_x1*H6)\ q(1
   v_x1 = (v_x1 - (((((v_x1 \ q(15)) * (v_x1 \ q(15))) \ q(7)) * (H1)) \ q(4)))
-  if v_x1< 0 then v_x1 = 0
-  if v_x1 > 419430400 then v_x1= 419430400
+  If v_x1< 0 Then v_x1 = 0
+  If v_x1 > 419430400 Then v_x1= 419430400
   bme280_read_humidity = (v_x1\ q(12)) / 1024.0
-end function
+End Function
 
-sub bme280_init
-  local i%,cal%(17)
+Sub bme280_init
+  Local i%,cal%(17)
   I2C2 open 400,1000
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_CHIPID
   I2C2 read BME280_ADDRESS,0,1,i%
-  if i%<>&H60 then print "Error BME280 not found"
+  If i%<>&H60 Then Print "Error BME280 not found"
 
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_T1
   I2C2 read BME280_ADDRESS,0,6,cal%()
-  T1=cal%(0) OR (cal%(1)<< 8)
-  T2=cal%(2) OR (cal%(3)<< 8): if T2 and s16b then T2=T2 OR s16
-  T3=cal%(4) OR (cal%(5)<< 8): if T3 and s16b then T3=T3 OR s16
+  T1=cal%(0) Or (cal%(1)<< 8)
+  T2=cal%(2) Or (cal%(3)<< 8): If T2 And s16b Then T2=T2 Or s16
+  T3=cal%(4) Or (cal%(5)<< 8): If T3 And s16b Then T3=T3 Or s16
 
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_P1
   I2C2 read BME280_ADDRESS,0,18,cal%()
-  P1=cal%(0) OR (cal%(1)<<8)
-  P2=cal%(2) OR (cal%(3)<<8): if P2 and s16b then P2=P2 OR s16
-  P3=cal%(4) OR (cal%(5)<<8): if P3 and s16b then P3=P3 OR s16
-  P4=cal%(6) OR (cal%(7)<<8): if P4 and s16b then P4=P4 OR s16
-  P5=cal%(8) OR (cal%(9)<<8): if P5 and s16b then P5=P5 OR s16
-  P6=cal%(10) OR (cal%(11)<<8): if P6 and s16b then P6=P6 OR s16
-  P7=cal%(12) OR (cal%(13)<<8): if P7 and s16b then P7=P7 OR s16
-  P8=cal%(14) OR (cal%(15)<<8): if P8 and s16b then P8=P8 OR s16
-  P9=cal%(16) OR (cal%(17)<<8): if P9 and s16b then P9=P9 OR s16
+  P1=cal%(0) Or (cal%(1)<<8)
+  P2=cal%(2) Or (cal%(3)<<8): If P2 And s16b Then P2=P2 Or s16
+  P3=cal%(4) Or (cal%(5)<<8): If P3 And s16b Then P3=P3 Or s16
+  P4=cal%(6) Or (cal%(7)<<8): If P4 And s16b Then P4=P4 Or s16
+  P5=cal%(8) Or (cal%(9)<<8): If P5 And s16b Then P5=P5 Or s16
+  P6=cal%(10) Or (cal%(11)<<8): If P6 And s16b Then P6=P6 Or s16
+  P7=cal%(12) Or (cal%(13)<<8): If P7 And s16b Then P7=P7 Or s16
+  P8=cal%(14) Or (cal%(15)<<8): If P8 And s16b Then P8=P8 Or s16
+  P9=cal%(16) Or (cal%(17)<<8): If P9 And s16b Then P9=P9 Or s16
 
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_H1
   I2C2 read BME280_ADDRESS,0,1,H1
   I2C2 write BME280_ADDRESS,1,1,BME280_REGISTER_H2
   I2C2 read BME280_ADDRESS,0,7,cal%()
-  H2=cal%(0) OR (cal%(1)<< 8): if H2 and s16b then H2=H2 OR s16
+  H2=cal%(0) Or (cal%(1)<< 8): If H2 And s16b Then H2=H2 Or s16
   H3=cal%(2)
-  H6=cal%(6): if H6 and s8b then H6=H6 OR s8
-  H4=(cal%(3)<<4) OR (cal%(4) and &H0F): if H4 and s12b then H4=H4 OR s12
-  H5=(cal%(5)<<4) OR (cal%(4)>>4): if H5 and s12b then H5=H5 OR s12
+  H6=cal%(6): If H6 And s8b Then H6=H6 Or s8
+  H4=(cal%(3)<<4) Or (cal%(4) And &H0F): If H4 And s12b Then H4=H4 Or s12
+  H5=(cal%(5)<<4) Or (cal%(4)>>4): If H5 And s12b Then H5=H5 Or s12
 
   I2C2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROLHUMID,&H05
   I2C2 write BME280_ADDRESS,0,2,BME280_REGISTER_CONTROL,&HB7
-end sub
+End Sub
 
-function q(x as integer) as integer
+Function q(x As integer) As integer
   q=(1<<x)
-End Function 
+End Function
