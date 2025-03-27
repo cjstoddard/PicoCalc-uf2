@@ -7,6 +7,14 @@
 ' MIT License
 ' MMBASIC 5.08
 
+Const BLK=RGB(BLACK)
+Const WHT=RGB(WHITE)
+Const YLW=RGB(YELLOW)
+Const GRN=RGB(GREEN)
+Const RED=RGB(RED)
+Const BLU=RGB(BLUE)
+Const CYA=RGB(CYAN)
+
 Const BME280_ADDRESS = &H76
 Const BME280_REGISTER_T1 = &H88
 Const BME280_REGISTER_P1 = &H8E
@@ -18,14 +26,6 @@ Const BME280_REGISTER_CONTROL = &HF4
 Const BME280_REGISTER_PRESSUREDATA = &HF7
 Const BME280_REGISTER_TEMPDATA = &HFA
 Const BME280_REGISTER_HUMIDDATA = &HFD
-
-Const BLK=RGB(BLACK)
-Const WHT=RGB(WHITE)
-Const YLW=RGB(YELLOW)
-Const GRN=RGB(GREEN)
-Const RED=RGB(RED)
-Const BLU=RGB(BLUE)
-Const CYA=RGB(CYAN)
 
 Dim INTEGER s16=&HFFFFFFFFFFFF0000 , s16b=&H8000
 Dim INTEGER s12=&HFFFFFFFFFFFFF000 , s12b=&H800
@@ -44,7 +44,8 @@ Colour BLK,WHT
 CLS WHT
 
 ' The size and placement of these controls will need
-' to be adjusted for the PicoCalc of 320(H)x480(V)
+' to be adjusted for the PicoCalc resolution of
+' 320(H)x480(V).
 GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
 GUI CAPTION #2, "Temperature", 30, 50, LT, BLK, WHT
 GUI CAPTION #3, "Humidity", 300, 50, LT, BLK, WHT
