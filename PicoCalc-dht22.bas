@@ -29,7 +29,7 @@ Do
 ' The next line sets the GPIO pin, this will need to be
 ' adjusted for the PicoCalc's available pins.
   Device HUMID GP27, temp, humidity
-  ' If you want the temp dispayed in celcius
+  ' If you want the temp dispayed in Celsius
   ' comment out the next 2 lines
   f_temp = (temp * 1.8) + 32
   temp = f_temp
