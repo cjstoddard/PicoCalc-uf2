@@ -39,7 +39,7 @@ Dim INTEGER t_fine
 ' to be adjusted for the available PicoCalc pins.
 SetPin GP26, GP27, I2C2
 GUI DELETE ALL
-Font 5
+Font 2.5
 Colour BLK,WHT
 CLS WHT
 
