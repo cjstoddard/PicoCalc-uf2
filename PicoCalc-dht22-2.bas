@@ -15,46 +15,31 @@ Const CYA=RGB(CYAN)
 
 Dim FLOAT temp, humidity
 
-RTC GETTIME
 GUI DELETE ALL
-Font 5
+Font 2.5
 Colour BLK,WHT
 CLS WHT
 
-GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
-GUI CAPTION #2, "Temperature", 280, 50, LT, BLK, WHT
-GUI CAPTION #3, "Humitiy", 576, 50, LT, BLK, WHT
-GUI GAUGE #4,400,200,100,BLK,BLK,0,120,1,"Deg F",GRN,70,YLW,85,RED
-GUI GAUGE #5,640,200,100,BLK,BLK,0,100,1,"Prec",GRN,40,YLW,65,RED
-GUI CAPTION #6, "States:", 50, 100, LT, BLK, WHT
-GUI LED #7, "Running", 70, 180, 20, GRN
-GUI LED #8, "Resting", 70, 230, 20, RED
-GUI CAPTION #9, Time$, 50, 450, LT, BLK, WHT
-GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYA
+GUI FRAME #1, "Home", 20, 20, 310, 310, BLK
+GUI CAPTION #2, "Temp", 70, 30, LT, BLK, WHT
+GUI CAPTION #3, "Humi", 225, 30, LT, BLK, WHT
 
-CtrlVal(#7) = 0
-CtrlVal(#8) = 1
+GUI GAUGE #4,100,130,75,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
+' If you want temperature in Celsius, Comment out the previous line
+' and uncomment the next line.
+'GUI GAUGE #4,100,130,75,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
+GUI GAUGE #5,250,130,75,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
 
 Do
+' The next line sets the GPIO pin, this will need to be
+' adjusted for the PicoCalc's available pins.
   Device HUMID GP27, temp, humidity
-  ' If you want the temp dispayed in celcius
+  ' If you want the temp dispayed in Celsius
   ' comment out the next 2 lines
   f_temp = (temp * 1.8) + 32
   temp = f_temp
 
-  btn = CtrlVal(#10)
-
-  If btn = 1 Then
-    CLS BLK
-    Exit
-  Else
-    CtrlVal(#4) = temp
-    CtrlVal(#5) = humidity
-    CtrlVal(#9) = Time$
-    CtrlVal(#7) = 0
-    CtrlVal(#8) = 1
-    CPU SLEEP 0.5
-    CtrlVal(#7) = 1
-    CtrlVal(#8) = 0
-  EndIf
+  CtrlVal(#4) = temp
+  CtrlVal(#5) = humidity
+  CPU SLEEP 0.5
 Loop
