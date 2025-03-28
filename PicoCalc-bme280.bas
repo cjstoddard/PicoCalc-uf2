@@ -43,20 +43,16 @@ Font 5
 Colour BLK,WHT
 CLS WHT
 
-' The size and placement of these controls will need
-' to be adjusted for the PicoCalc resolution of
-' 320(H)x480(V).
-GUI FRAME #1, "Home", 20, 20, 760, 440, BLK
-GUI CAPTION #2, "Temperature", 30, 50, LT, BLK, WHT
-GUI CAPTION #3, "Humidity", 300, 50, LT, BLK, WHT
-GUI GAUGE #4,150,200,100,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
+GUI FRAME #1, "Home", 20, 20, 310, 310, BLK
+GUI CAPTION #2, "Temp", 70, 30, LT, BLK, WHT
+GUI CAPTION #3, "Humi", 225, 30, LT, BLK, WHT
+GUI GAUGE #4,100,130,75,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
 ' If you want temperature in Celsius, Comment out the previous line
 ' and uncomment the next line.
-'GUI GAUGE #4,150,200,100,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
-GUI GAUGE #5,375,200,100,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
-' GUI BUTTON #10, "Exit|EXIT", 50, 300, 200, 75, BLK, CYA
-GUI GAUGE #11,150,375,100,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
-GUI CAPTION #12, "Pressure", 285, 350, LT, BLK, WHT
+'GUI GAUGE #4,100,130,75,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
+GUI GAUGE #5,250,130,75,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
+GUI GAUGE #11,100,270,75,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
+GUI CAPTION #12, "Pres", 225, 250, LT, BLK, WHT
 
 bme280_init
 
