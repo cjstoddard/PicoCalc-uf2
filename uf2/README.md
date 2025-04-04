@@ -12,3 +12,7 @@ I got the uLisp code to compile, and uploaded it.
 Update 3-26-2025
 
 I moved all the uf2 images I compiled to their own folder, so I could make room for my own projects.
+
+Update 4-3-2025
+
+I added a uLisp and PicoMite uf2 images for the Pico 2. If you are interested in other versions of uLisp uf2, goto this [website](https://dev.metacircular.net/). Thank you guu and picolisper from the Clockworkpi forums for building these uLisp images.
