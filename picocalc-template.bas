@@ -17,4 +17,4 @@ Colour WHT,BLU
 CLS BLU
 
 GUI FRAME #1, "Home", 10, 10, 310, 310, WHT
-GUI BUTTON #2, "Exit|EXIT", 210, 265, 100, 50, BLK, CYA
+
