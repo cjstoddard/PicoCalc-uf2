@@ -37,7 +37,7 @@ Dim INTEGER t_fine
 
 ' This is the GPIO pins for the BME280, these will need 
 ' to be adjusted for the available PicoCalc pins.
-SetPin GP26, GP27, I2C2
+SetPin GP2, GP3, I2C2
 GUI DELETE ALL
 Font 2.5
 Colour BLK,WHT

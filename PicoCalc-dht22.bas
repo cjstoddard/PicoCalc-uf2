@@ -28,7 +28,7 @@ GUI BARGAUGE #7, 50, 200, 300, 25, WHT, BLU, 0, 100, GRN, 33, YLW, 66, RED, 100
 Do
 ' The next line sets the GPIO pin, this will need to be
 ' adjusted for the PicoCalc's available pins.
-  Device HUMID GP27, temp, humidity
+  Device HUMID GP28, temp, humidity
   ' If you want the temp dispayed in Celsius
   ' comment out the next 2 lines
   f_temp = (temp * 1.8) + 32
