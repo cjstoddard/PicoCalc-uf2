@@ -1,6 +1,6 @@
 'picocalc-template.bas
 
-OPTION GUI CONTROLS 5
+OPTION GUI CONTROLS 1
 
 Const BLK=RGB(BLACK)
 Const BLU=RGB(BLUE)

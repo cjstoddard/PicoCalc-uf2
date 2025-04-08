@@ -7,6 +7,8 @@
 ' MIT License
 ' MMBASIC 5.08
 
+OPTION GUI CONTROLS 7
+
 Const BLK=RGB(BLACK)
 Const WHT=RGB(WHITE)
 Const YLW=RGB(YELLOW)
@@ -51,8 +53,8 @@ GUI GAUGE #4,100,130,60,BLK,BLK,0,120,1,"F",YLW,60,GRN,90,RED
 ' and uncomment the next line.
 'GUI GAUGE #4,100,130,60,BLK,BLK,0,100,1,"C",YLW,15,GRN,32,RED
 GUI GAUGE #5,250,130,60,BLK,BLK,0,100,1,"%",YLW,30,GRN,60,RED
-GUI GAUGE #11,100,270,60,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
-GUI CAPTION #12, "Pres", 225, 250, LT, BLK, WHT
+GUI GAUGE #6,100,270,60,BLK,BLK,600,1200,1,"hPa",YLW,900,GRN,1100,RED
+GUI CAPTION #7, "Pres", 225, 250, LT, BLK, WHT
 
 bme280_init
 
@@ -64,7 +66,7 @@ Do
   ' previous 3 lines and uncomment the next line.
   'CtrlVal(#4) = bme280_read_temp()
   CtrlVal(#5) = bme280_read_humidity()
-  CtrlVal(#11) = bme280_read_pressure()
+  CtrlVal(#6) = bme280_read_pressure()
   CPU SLEEP 0.5
 Loop
 
