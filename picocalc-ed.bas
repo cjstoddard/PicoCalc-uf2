@@ -102,12 +102,8 @@ SELECT CASE c$
         END IF
 
     CASE "S"
-        OPEN filename$ FOR OUTPUT AS #1
-        FOR i = 0 TO filelines - 1
-            PRINT #1, lines$(i)
-        NEXT i
-        CLOSE #1
-        PRINT "File saved."
+        PRINT "Saving file..."
+        GOSUB SaveFile
 
     CASE "Q"
         PRINT "Saving file before exit..."
