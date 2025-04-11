@@ -1,4 +1,4 @@
-'picocalc-ed.bas
+'pico-ed.bas
 ' Code by Chris Stoddard
 ' MMBasic 6.00
 
@@ -54,7 +54,7 @@ ELSE
 END IF
 
 EditLoop:
-PRINT: PRINT "Commands: L=List, E=Edit <n>, A=Append, I=Insert <n>, D=Delete <n>, S=Save, W=Write, H=Help Q=Quit"
+PRINT: PRINT "Commands: L=List, E <n>=Edit , A=Append, I <n>=Insert, D <n>=Delete, S=Save, W=Write, H=Help Q=Quit"
 PRINT "> ";
 INPUT cmd$
 
