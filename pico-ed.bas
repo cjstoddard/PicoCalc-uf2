@@ -2,7 +2,7 @@
 ' Code by Chris Stoddard
 ' MMBasic 6.00
 
-'=========================================================
+'==============================
 ' The following code was taken from the
 ' PicoMite User Manual version 6.00.01
 ' Page 28.
@@ -27,7 +27,7 @@ Function LTrim$(s$, c$)
     LTrim$ = Mid$(LTrim$, 2)
   Loop
 End Function
-'=========================================================
+'==============================
 
 CONST MAXLINES = 20
 DIM lines$(MAXLINES)
@@ -54,7 +54,10 @@ ELSE
 END IF
 
 EditLoop:
-PRINT: PRINT "Commands: L=List, E <n>=Edit , A=Append, I <n>=Insert, D <n>=Delete, S=Save, W=Write, H=Help Q=Quit"
+PRINT
+PRINT "Commands: L=List, E <n>=Edit, A=Append"
+PRINT "I <n>=Insert, D <n>=Delete, S=Save"
+PRINT "W=Write, H=Help Q=Quit"
 PRINT "> ";
 INPUT cmd$
 
@@ -64,6 +67,7 @@ intArg = VAL(strArg$)
 
 SELECT CASE c$
     CASE "L"
+        CLS
         PRINT
         FOR i = 0 TO filelines - 1
             PRINT i; ": "; lines$(i)
@@ -127,7 +131,19 @@ SELECT CASE c$
         GOSUB SaveFile
 
     CASE "H"
-        GOSUB HelpScreen
+        CLS
+        PRINT "Pico-ed Help"
+        PRINT STRING$(30, "-")
+        PRINT "L            List all lines"
+        PRINT "E <n>        Edit line number n"
+        PRINT "A            Append new line at end"
+        PRINT "I <n>        Insert line at position n"
+        PRINT "D <n>        Delete line n"
+        PRINT "S            Save to current filename"
+        PRINT "W            Save As (write to new file)"
+        PRINT "H            Show this help screen"
+        PRINT "Q            Save and Quit"
+        PRINT STRING$(30, "-")
         
     CASE "Q"
         PRINT "Saving file before exit..."
@@ -148,21 +164,4 @@ SaveFile:
     NEXT i
     CLOSE #1
     PRINT "File saved."
-    RETURN
-
-HelpScreen:
-    CLS
-    PRINT "Pico-ed Help"
-    PRINT STRING$(30, "-")
-    PRINT "L            List all lines"
-    PRINT "E <n>        Edit line number n"
-    PRINT "A            Append new line at end"
-    PRINT "I <n>        Insert line at position n"
-    PRINT "D <n>        Delete line n"
-    PRINT "S            Save to current filename"
-    PRINT "W            Save As (write to new file)"
-    PRINT "H            Show this help screen"
-    PRINT "Q            Save and Quit"
-    PRINT: PRINT "Press ENTER to return..."
-    INPUT dummy$
     RETURN
