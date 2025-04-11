@@ -54,7 +54,7 @@ ELSE
 END IF
 
 EditLoop:
-PRINT: PRINT "Commands: L=List, E=Edit, A=Append, D=Delete, S=Save, Q=Quit"
+PRINT: PRINT "Commands: L=List, E=Edit <n>, A=Append, I=Insert <n>, D=Delete <n>, S=Save, W=Write, H=Help Q=Quit"
 PRINT "> ";
 INPUT cmd$
 
@@ -89,6 +89,21 @@ SELECT CASE c$
             PRINT "File is full."
         END IF
 
+    CASE "I"
+        IF intArg >= 0 AND intArg <= filelines THEN
+            PRINT "Enter line to insert at "; intArg; ":"
+            INPUT newText$
+            IF filelines < MAXLINES THEN
+                filelines = filelines + 1
+            END IF
+            FOR i = filelines - 1 TO intArg + 1 STEP -1
+                lines$(i) = lines$(i - 1)
+            NEXT i
+            lines$(intArg) = newText$
+        ELSE
+            PRINT "Invalid insert position."
+        END IF
+        
     CASE "D"
         IF intArg >= 0 AND intArg < filelines THEN
             FOR i = intArg TO filelines - 2
@@ -105,6 +120,15 @@ SELECT CASE c$
         PRINT "Saving file..."
         GOSUB SaveFile
 
+    CASE "W"
+        PRINT "Enter new filename to save as:"
+        INPUT filename$
+        PRINT "Saving file..."
+        GOSUB SaveFile
+
+    CASE "H"
+        GOSUB HelpScreen
+        
     CASE "Q"
         PRINT "Saving file before exit..."
         GOSUB SaveFile
@@ -126,3 +150,19 @@ SaveFile:
     PRINT "File saved."
     RETURN
 
+HelpScreen:
+    CLS
+    PRINT "Pico-ed Help"
+    PRINT STRING$(30, "-")
+    PRINT "L            List all lines"
+    PRINT "E <n>        Edit line number n"
+    PRINT "A            Append new line at end"
+    PRINT "I <n>        Insert line at position n"
+    PRINT "D <n>        Delete line n"
+    PRINT "S            Save to current filename"
+    PRINT "W            Save As (write to new file)"
+    PRINT "H            Show this help screen"
+    PRINT "Q            Save and Quit"
+    PRINT: PRINT "Press ENTER to return..."
+    INPUT dummy$
+    RETURN
