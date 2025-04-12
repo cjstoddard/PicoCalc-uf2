@@ -16,4 +16,7 @@ I removed icocalc-bme280.bas, there were too many things that turned out to be p
 Update 4-10-2025
 I added Pico-ed.bas. This is a crude text line editor that handles 20 lines. This can be changed, but 20 lines works best for the PicoCalc. I have no idea why someone would use this, but since someone was making an MP3 player, I figured a text editor was not an entirely stupid idea. Writing a full screen text editor would be impractical in PicoMite Basic and if you need one, the built in editor is perfectly functional.
 
+Update 4-12-2025
+I added an updatted version of lunar.bas, a Lunar Lander game.
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
