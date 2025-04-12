@@ -31,6 +31,9 @@ End Function
 
 CONST MAXLINES = 20
 DIM lines$(MAXLINES)
+
+TopOfTheWorld:
+
 filelines = 0
 
 PRINT "Pico-ed.bas"
@@ -55,9 +58,10 @@ END IF
 
 EditLoop:
 PRINT
-PRINT "Commands: L=List, E <n>=Edit, A=Append"
-PRINT "I <n>=Insert, D <n>=Delete, S=Save"
-PRINT "W=Write, H=Help Q=Quit"
+PRINT "Commands: A=Append, D <n>=Delete,"
+PRINT "E <n>=Edit, H=Help, I <n>=Insert,"
+PRINT "L=List, O=Open, Q=Quit, S=Save,"
+PRINT "W=Write"
 PRINT "> ";
 INPUT cmd$
 
@@ -124,6 +128,11 @@ SELECT CASE c$
         PRINT "Saving file..."
         GOSUB SaveFile
 
+    CASE "O"
+        PRINT "Saving current file..."
+        GOSUB SaveFile
+        GOTO TopOfTheWorld
+
     CASE "W"
         PRINT "Enter new filename to save as:"
         INPUT filename$
@@ -134,15 +143,16 @@ SELECT CASE c$
         CLS
         PRINT "Pico-ed Help"
         PRINT STRING$(30, "-")
-        PRINT "L            List all lines"
-        PRINT "E <n>        Edit line number n"
         PRINT "A            Append new line at end"
-        PRINT "I <n>        Insert line at position n"
         PRINT "D <n>        Delete line n"
+        PRINT "E <n>        Edit line number n"
+        PRINT "H            Show this help screen"
+        PRINT "I <n>        Insert line at position n"
+        PRINT "L            List all lines"
+        PRINT "O            Open file"
+        PRINT "Q            Save and Quit"
         PRINT "S            Save to current filename"
         PRINT "W            Save As (write to new file)"
-        PRINT "H            Show this help screen"
-        PRINT "Q            Save and Quit"
         PRINT STRING$(30, "-")
         
     CASE "Q"
