@@ -43,24 +43,6 @@ strArg$ = MID$(cmd$,3)
 intArg = VAL(strArg$)
 
 SELECT CASE c$
-    CASE "L"
-        CLS
-        PRINT
-        FOR i = 0 TO filelines - 1
-            PRINT i; ": "; lines$(i)
-        NEXT i
-
-    CASE "E"
-        IF intArg >= 0 AND intArg < filelines THEN
-            PRINT "Editing line "; intArg; ": "; lines$(intArg)
-            PRINT "New content: ";
-            INPUT TempText$
-            newText$ = InputString(TempText$)
-            lines$(intArg) = newText$
-        ELSE
-            PRINT "Invalid line number."
-        END IF
-
     CASE "A"
         IF filelines < MAXLINES THEN
             PRINT "Enter new line content:";
@@ -72,22 +54,6 @@ SELECT CASE c$
             PRINT "File is full."
         END IF
 
-    CASE "I"
-        IF intArg >= 0 AND intArg <= filelines THEN
-            PRINT "Enter line to insert at "; intArg; ":"
-            INPUT TempText$
-            newText$ = InputString(TempText$)
-            IF filelines < MAXLINES THEN
-                filelines = filelines + 1
-            END IF
-            FOR i = filelines - 1 TO intArg + 1 STEP -1
-                lines$(i) = lines$(i - 1)
-            NEXT i
-            lines$(intArg) = newText$
-        ELSE
-            PRINT "Invalid insert position."
-        END IF
-        
     CASE "D"
         IF intArg >= 0 AND intArg < filelines THEN
             FOR i = intArg TO filelines - 2
@@ -100,20 +66,16 @@ SELECT CASE c$
             PRINT "Invalid line number."
         END IF
 
-    CASE "S"
-        PRINT "Saving file..."
-        GOSUB SaveFile
-
-    CASE "O"
-        PRINT "Saving current file..."
-        GOSUB SaveFile
-        GOTO TopOfTheWorld
-
-    CASE "W"
-        PRINT "Enter new filename to save as:"
-        INPUT filename$
-        PRINT "Saving file..."
-        GOSUB SaveFile
+    CASE "E"
+        IF intArg >= 0 AND intArg < filelines THEN
+            PRINT "Editing line "; intArg; ": "; lines$(intArg)
+            PRINT "New content: ";
+            INPUT TempText$
+            newText$ = InputString(TempText$)
+            lines$(intArg) = newText$
+        ELSE
+            PRINT "Invalid line number."
+        END IF
 
     CASE "H"
         CLS
@@ -130,12 +92,50 @@ SELECT CASE c$
         PRINT "S            Save to current filename"
         PRINT "W            Save As (write to new file)"
         PRINT STRING$(30, "-")
-        
+
+    CASE "I"
+        IF intArg >= 0 AND intArg <= filelines THEN
+            PRINT "Enter line to insert at "; intArg; ":"
+            INPUT TempText$
+            newText$ = InputString(TempText$)
+            IF filelines < MAXLINES THEN
+                filelines = filelines + 1
+            END IF
+            FOR i = filelines - 1 TO intArg + 1 STEP -1
+                lines$(i) = lines$(i - 1)
+            NEXT i
+            lines$(intArg) = newText$
+        ELSE
+            PRINT "Invalid insert position."
+        END IF
+
+    CASE "L"
+        CLS
+        PRINT
+        FOR i = 0 TO filelines - 1
+            PRINT i; ": "; lines$(i)
+        NEXT i
+
+    CASE "O"
+        PRINT "Saving current file..."
+        GOSUB SaveFile
+        GOTO TopOfTheWorld
+
     CASE "Q"
         PRINT "Saving file before exit..."
         GOSUB SaveFile
         PRINT "Goodbye!"
         END
+
+    CASE "S"
+        PRINT "Saving file..."
+        GOSUB SaveFile
+
+    CASE "W"
+        PRINT "Enter new filename to save as:"
+        INPUT filename$
+        PRINT "Saving file..."
+        GOSUB SaveFile
 
     CASE ELSE
         PRINT "Unknown command."
