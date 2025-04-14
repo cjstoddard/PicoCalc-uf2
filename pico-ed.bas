@@ -2,32 +2,22 @@
 ' Code by Chris Stoddard
 ' MMBasic 6.00
 
-'==============================
-' The following code was taken from the
-' PicoMite User Manual version 6.00.01
-' Page 28.
+function InputString(b$) as String
+    local r$="", i, m$
 
-' trim any characters in c$ from the start and end of s$
-Function Trim$(s$, c$)
-  Trim$ = RTrim$(LTrim$(s$, c$), c$)
-End Function
+    for i = 1 to len(b$)
+        m$ = mid$(b$,i,1)
+        select case asc(m$)
+            ' Left shift, right shift, ctrl, alt
+            case 162, 163, 161, 165
+               m$=""
+        end select
 
-' trim any characters in c$ from the end of s$
-Function RTrim$(s$, c$)
-  RTrim$ = s$
-  Do While Instr(c$, Right$(RTrim$, 1))
-    RTrim$ = Mid$(RTrim$, 1, Len(RTrim$) - 1)
-  Loop
-End Function
+        r$=r$+m$
+    next i
 
-' trim any characters in c$ from the start of s$
-Function LTrim$(s$, c$)
-  LTrim$ = s$
-  Do While Instr(c$, Left$(LTrim$, 1))
-    LTrim$ = Mid$(LTrim$, 2)
-  Loop
-End Function
-'==============================
+    InputString = r$
+end function
 
 CONST MAXLINES = 20
 DIM lines$(MAXLINES)
@@ -81,7 +71,8 @@ SELECT CASE c$
         IF intArg >= 0 AND intArg < filelines THEN
             PRINT "Editing line "; intArg; ": "; lines$(intArg)
             PRINT "New content: ";
-            INPUT newText$
+            INPUT TempText$
+            newText$ = InputString(TempText$)
             lines$(intArg) = newText$
         ELSE
             PRINT "Invalid line number."
@@ -90,7 +81,8 @@ SELECT CASE c$
     CASE "A"
         IF filelines < MAXLINES THEN
             PRINT "Enter new line content:";
-            INPUT newText$
+            INPUT TempText$
+            newText$ = InputString(TempText$)
             lines$(filelines) = newText$
             filelines = filelines + 1
         ELSE
@@ -100,7 +92,8 @@ SELECT CASE c$
     CASE "I"
         IF intArg >= 0 AND intArg <= filelines THEN
             PRINT "Enter line to insert at "; intArg; ":"
-            INPUT newText$
+            INPUT TempText$
+            newText$ = InputString(TempText$)
             IF filelines < MAXLINES THEN
                 filelines = filelines + 1
             END IF
