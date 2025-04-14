@@ -1,5 +1,5 @@
 'lunar.bas
-' Original code by CREATIVE COMPUTING MORRISTOWN, NEW JERSEY
+' Original code by Creative Computing, Morristown, New Jersey
 ' Updated code by Chris Stoddard
 
 PRINT TAB(33);"LUNAR"
