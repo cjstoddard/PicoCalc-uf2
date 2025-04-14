@@ -2,23 +2,6 @@
 ' Code by Chris Stoddard
 ' MMBasic 6.00
 
-function InputString(b$) as String
-    local r$="", i, m$
-
-    for i = 1 to len(b$)
-        m$ = mid$(b$,i,1)
-        select case asc(m$)
-            ' Left shift, right shift, ctrl, alt
-            case 162, 163, 161, 165
-               m$=""
-        end select
-
-        r$=r$+m$
-    next i
-
-    InputString = r$
-end function
-
 CONST MAXLINES = 20
 DIM lines$(MAXLINES)
 
@@ -168,3 +151,20 @@ SaveFile:
     CLOSE #1
     PRINT "File saved."
     RETURN
+
+function InputString(b$) as String
+    local r$="", i, m$
+
+    for i = 1 to len(b$)
+        m$ = mid$(b$,i,1)
+        select case asc(m$)
+            ' Left shift, right shift, ctrl, alt
+            case 162, 163, 161, 165
+               m$=""
+        end select
+
+        r$=r$+m$
+    next i
+
+    InputString = r$
+end function
