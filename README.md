@@ -19,4 +19,7 @@ I added Pico-ed.bas. This is a crude text line editor that handles 20 lines. Thi
 Update 4-12-2025
 I added an updated version of lunar.bas, a Lunar Lander game.
 
+Update 4-16-2025
+Added RndDungeon.bas, this is a dumb little dungeon crawling text adventure I originally wrote multiple decades ago. Its replay value in its current form is fairly low, but my friends and I would expand it by adding random weird things to it. I can not post those versions of the game, because first, I no longer have them, but also we were teenaged boys and so its not hard to guess the ultra violent, crude and often sexual content of those later versions. As I recall the last version exceeded a thousand lines of code.
+
 Disclaimer: This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a paticular purpose and nonifringment. In no event shall the author or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
