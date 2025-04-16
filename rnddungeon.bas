@@ -42,7 +42,7 @@ currentRoom = 1
 DO WHILE action$ <> "q"
     PRINT: PRINT "----------"
     PRINT "You are in room "; currentRoom
-    PRINT ROOMS$(currentRoom)  ' Print room description
+    PRINT ROOMS$(currentRoom)
     PRINT "Health: "; PLAYER(0); " Strength: "; PLAYER(1)
     PRINT "Inventory: "; PLAYER(2)
     IF currentRoom = 25 THEN
@@ -52,12 +52,13 @@ DO WHILE action$ <> "q"
     PRINT "What will you do? (n = North, s = South, e = East, w = West, q = Quit)"
     INPUT action$
     IF action$ = "q" THEN
+      PRINT "You run screaming from the dungeon like a scared little child!"
       END
     ENDIF
 
     IF action$ = "n" THEN
         IF currentRoom > 5 THEN
-            currentRoom = currentRoom - 5 ' Move north
+            currentRoom = currentRoom - 5
         ELSE
             PRINT "You can't move north."
         END IF
@@ -65,7 +66,7 @@ DO WHILE action$ <> "q"
 
     IF action$ = "s" THEN
         IF currentRoom < 21 THEN
-            currentRoom = currentRoom + 5 ' Move south
+            currentRoom = currentRoom + 5
         ELSE
             PRINT "You can't move south."
         END IF
@@ -73,15 +74,15 @@ DO WHILE action$ <> "q"
 
     IF action$ = "e" THEN
         IF currentRoom = 1 OR currentRoom = 2 OR currentRoom = 3 OR currentRoom = 4 OR currentRoom = 5 THEN
-            currentRoom = currentRoom + 1 ' Move east
+            currentRoom = currentRoom + 1
         ELSEIF currentRoom = 6 OR currentRoom = 7 OR currentRoom = 8 OR currentRoom = 9 OR currentRoom = 10 THEN
-            currentRoom = currentRoom + 1 ' Move east
+            currentRoom = currentRoom + 1
         ELSEIF currentRoom = 11 OR currentRoom = 12 OR currentRoom = 13 OR currentRoom = 14 OR currentRoom = 15 THEN
-            currentRoom = currentRoom + 1 ' Move east
+            currentRoom = currentRoom + 1
         ELSEIF currentRoom = 16 OR currentRoom = 17 OR currentRoom = 18 OR currentRoom = 19 OR currentRoom = 20 THEN
-            currentRoom = currentRoom + 1 ' Move east
+            currentRoom = currentRoom + 1
         ELSEIF currentRoom = 21 OR currentRoom = 22 OR currentRoom = 23 THEN
-            currentRoom = currentRoom + 1 ' Move east
+            currentRoom = currentRoom + 1
         ELSE
             PRINT "You can't move east."
         END IF
@@ -89,7 +90,7 @@ DO WHILE action$ <> "q"
 
     IF action$ = "w" THEN
         IF currentRoom > 1 AND currentRoom < 25 THEN
-            currentRoom = currentRoom - 1 ' Move west
+            currentRoom = currentRoom - 1
         ELSE
             PRINT "You can't move west."
         END IF
