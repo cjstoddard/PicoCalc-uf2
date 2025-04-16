@@ -3,8 +3,6 @@
 ' MMBasic 6.00
 
 DIM ROOMS$(25)
-DIM RoomNumber(25)
-
 DIM PLAYER(3) ' [0] Health, [1] Strength, [2] Inventory
 DIM fightOccurred ' Flag to track if a fight occurred
 
