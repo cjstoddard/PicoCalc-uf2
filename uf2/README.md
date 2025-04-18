@@ -23,4 +23,4 @@ Added MicroPython for the Pico 2 and Pico 2 W. The source and such can be had fr
 
 Updated 4-17-2025
 
-Updated the MicroPython uf2 files for the lates builds.
+Updated the MicroPython uf2 files for the latest builds.
