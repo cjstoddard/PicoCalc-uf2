@@ -20,3 +20,7 @@ I added a uLisp and PicoMite uf2 images for the Pico 2. If you are interested in
 Update 4-5-2025
 
 Added MicroPython for the Pico 2 and Pico 2 W. The source and such can be had from the original website, https://github.com/zenodante/PicoCalc-micropython-driver.
+
+Updated 4-17-2025
+
+Updated the MicroPython uf2 files for the lates builds.
