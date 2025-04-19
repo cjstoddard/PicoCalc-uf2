@@ -117,9 +117,11 @@ DO WHILE action$ <> "q"
             IF Attack > 18 THEN
                 PRINT "You defeated the monster!"
                 PLAYER(0) = PLAYER(0) - 10
+                PLAYER(1) = PLAYER(1) + .25
             ELSE
                 PRINT "The monster defeats you!"
                 PLAYER(0) = PLAYER(0) - 20
+                PLAYER(1) = PLAYER(1) + .1
             END IF
             fightOccurred = 1
         ELSEIF fightRun$ = "r" THEN
