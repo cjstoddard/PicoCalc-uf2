@@ -1,4 +1,4 @@
-'rnddungeon.bas
+'rnddungeon.bas v. 1.1
 ' Code by Chris Stoddard
 ' MMBasic 6.00
 
@@ -46,14 +46,14 @@ DO WHILE action$ <> "q"
     PRINT "Health: "; PLAYER(0); " Strength: "; PLAYER(1)
     PRINT "Inventory: "; PLAYER(2)
     IF currentRoom = 25 THEN
-      END
+        END
     ENDIF
 
     PRINT "What will you do? (n = North, s = South, e = East, w = West, q = Quit)"
     INPUT action$
     IF action$ = "q" THEN
-      PRINT "You run screaming from the dungeon like a scared little child!"
-      END
+        PRINT "You run screaming from the dungeon like a scared little child!"
+        END
     ENDIF
 
     IF action$ = "n" THEN
@@ -61,8 +61,8 @@ DO WHILE action$ <> "q"
             currentRoom = currentRoom - 5
         ELSE
             PRINT "You can't move north."
-        END IF
-    END IF
+        ENDIF
+    ENDIF
 
     IF action$ = "s" THEN
         IF currentRoom < 21 THEN
@@ -70,7 +70,7 @@ DO WHILE action$ <> "q"
         ELSE
             PRINT "You can't move south."
         END IF
-    END IF
+    ENDIF
 
     IF action$ = "e" THEN
         IF currentRoom = 1 OR currentRoom = 2 OR currentRoom = 3 OR currentRoom = 4 OR currentRoom = 5 THEN
@@ -85,16 +85,16 @@ DO WHILE action$ <> "q"
             currentRoom = currentRoom + 1
         ELSE
             PRINT "You can't move east."
-        END IF
-    END IF
+        ENDIF
+    ENDIF
 
     IF action$ = "w" THEN
         IF currentRoom > 1 AND currentRoom < 25 THEN
             currentRoom = currentRoom - 1
         ELSE
             PRINT "You can't move west."
-        END IF
-    END IF
+        ENDIF
+    ENDIF
 
     IsMonster = Int(Rnd * 100) + 1
     IF IsMonster < 31 THEN
@@ -105,8 +105,8 @@ DO WHILE action$ <> "q"
         ELSEIF monster = 2 THEN
             PRINT "An orc attacks!"
         ELSE
-            PRINT "A kobold tries to sneak up on you!"
-        END IF
+            PRINT "A kobold sneaks up on you!"
+        ENDIF
 
         PRINT "Do you want to fight or run? (f = Fight, r = Run)"
         INPUT fightRun$
@@ -114,7 +114,7 @@ DO WHILE action$ <> "q"
         IF fightRun$ = "f" THEN
             Roll_d20 = Int(Rnd * 20) + 1
             Attack = Roll_d20 + PLAYER(1)
-            IF Attack > 18 THEN
+            IF Attack > 17 THEN
                 PRINT "You defeated the monster!"
                 PLAYER(0) = PLAYER(0) - 10
                 PLAYER(1) = PLAYER(1) + .25
@@ -122,7 +122,7 @@ DO WHILE action$ <> "q"
                 PRINT "The monster defeats you!"
                 PLAYER(0) = PLAYER(0) - 20
                 PLAYER(1) = PLAYER(1) + .1
-            END IF
+            ENDIF
             fightOccurred = 1
         ELSEIF fightRun$ = "r" THEN
             PRINT "You ran away!"
@@ -130,27 +130,49 @@ DO WHILE action$ <> "q"
             fightOccurred = 1
         ELSE
             PRINT "Invalid choice. You stand there frozen."
-        END IF
+        ENDIF
     ELSE
         PRINT "You are alone in this room."
         fightOccurred = 0
-    END IF
+    ENDIF
 
     IF fightOccurred = 0 AND PLAYER(0) < 100 THEN
         PLAYER(0) = PLAYER(0) + 1
         PRINT "You rest and regain 1 health."
-    END IF
+    ENDIF
+
+   IsTrap = Int(Rnd * 100) + 1
+    IF IsTrap < 11 THEN
+        WhatTrap = Int(Rnd * 3) + 1
+        IF WhatTrap = 1 THEN
+            TrapType$ = "Poison Dart Trap"
+        ELSEIF WhatTrap = 2 THEN
+            TrapType$ = "Pit Trap"
+        ELSE
+            TrapType$ = "Exploding Rune Trap"
+        ENDIF
+        Roll_d20 = Int(Rnd * 20) + 1
+        ResolveTrap = Roll_d20 + PLAYER(1)
+        If ResolveTrap > 17 THEN
+            PRINT "You found a " ;  TrapType$
+            Print "You managed to avoid being hurt when it went off."
+            PLAYER(1) = PLAYER(1) + .25
+        ELSEIF ResolveTrap < 18 THEN
+            PRINT "A " ;  TrapType$ ; " found you."
+            Print "You failed to avoid the trap."
+            PLAYER(0) = PLAYER(0) - 10
+            PLAYER(1) = PLAYER(1) + .1
+        ENDIF
+    ENDIF
 
     IF PLAYER(0) <= 0 THEN
         PRINT "You have died. Game Over."
         END
-    END IF
+    ENDIF
 
     IsTreasure = Int(Rnd * 100) + 1
     IF IsTreasure < 21 THEN
         PRINT "You find some treasure!"
-        PLAYER(2) = 1
-    END IF
-
+        PLAYER(2) = PLAYER(2) + 1
+    ENDIF
 LOOP
-
