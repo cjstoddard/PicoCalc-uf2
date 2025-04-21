@@ -4,7 +4,7 @@
 
 DIM ROOMS$(25)
 DIM PLAYER(3) ' [0] Health, [1] Strength, [2] Inventory
-DIM fightOccurred ' Flag to track if a fight occurred
+DIM fightOccurred ' Flag to track IF a fight occurred
 
 PLAYER(0) = 100 ' Health
 PLAYER(1) = 10 ' Strength
@@ -136,11 +136,6 @@ DO WHILE action$ <> "q"
         fightOccurred = 0
     ENDIF
 
-    IF fightOccurred = 0 AND PLAYER(0) < 100 THEN
-        PLAYER(0) = PLAYER(0) + 1
-        PRINT "You rest and regain 1 health."
-    ENDIF
-
    IsTrap = Int(Rnd * 100) + 1
     IF IsTrap < 11 THEN
         WhatTrap = Int(Rnd * 3) + 1
@@ -153,7 +148,7 @@ DO WHILE action$ <> "q"
         ENDIF
         Roll_d20 = Int(Rnd * 20) + 1
         ResolveTrap = Roll_d20 + PLAYER(1)
-        If ResolveTrap > 17 THEN
+        IF ResolveTrap > 17 THEN
             PRINT "You found a " ;  TrapType$
             Print "You managed to avoid being hurt when it went off."
             PLAYER(1) = PLAYER(1) + .25
@@ -162,7 +157,13 @@ DO WHILE action$ <> "q"
             Print "You failed to avoid the trap."
             PLAYER(0) = PLAYER(0) - 10
             PLAYER(1) = PLAYER(1) + .1
+            fightOccurred = 1
         ENDIF
+    ENDIF
+
+    IF fightOccurred = 0 AND PLAYER(0) < 100 THEN
+        PLAYER(0) = PLAYER(0) + 1
+        PRINT "You rest and regain 1 health."
     ENDIF
 
     IF PLAYER(0) <= 0 THEN
