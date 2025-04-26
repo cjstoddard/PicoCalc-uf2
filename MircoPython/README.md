@@ -1,0 +1,2 @@
+Update 4-26-2025
+I ported Hamurabi to MicroPython, mostly just to practice MicroPython. I added my boot.py file as well, I thought it might be helpful to other PicoCalc users who are looking to mount their SDCard's and Wifi at bootup. Along with that is a simple program to check to make sure those two things happed aft it boots.
