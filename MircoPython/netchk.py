@@ -8,4 +8,5 @@ if wlan.isconnected():
 else:
     print("Not connected to WiFi.")
 
+print("SD Card Listing")
 print(os.listdir('/sd'))
