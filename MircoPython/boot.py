@@ -5,8 +5,8 @@ import network
 import time
 
 # --- SETTINGS ---
-WIFI_SSID = "Asgard"
-WIFI_PASSWORD = "niftcarroty844"
+WIFI_SSID = "SSID"
+WIFI_PASSWORD = "Password"
 WIFI_TIMEOUT = 10  # seconds to wait before giving up
 # ----------------
 
