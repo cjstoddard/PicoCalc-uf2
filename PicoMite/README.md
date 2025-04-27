@@ -16,7 +16,7 @@ Update 4-9-2025
 I removed picocalc-bme280.bas, there were too many things that turned out to be problematic with the way the PicoCalc is configured. The program will require a complete rewrite. One thing I did find out though is the keyboard is on I2C2, so any device you want to connect will need to be on the first I2C channel.
 
 Update 4-8-2025
-Picocalc-dht22.bas works now. Picocalc-dht22-2.bas works, but the gauges do not render properly, I suspect this is a bug in the PicoCalc version of PicoMite for the pico 2. ~~I have not tested a bme280 yet, Picocalc-bme280.bas may still not work.~~
+Picocalc-dht22.bas works now. Picocalc-dht22-2.bas works, but the gauges do not render properly, I suspect this is a bug in the PicoCalc version of PicoMite for the pico 2.
 
 Update 4-4-2025
 I added an updated version of Hamurabi.bas.
