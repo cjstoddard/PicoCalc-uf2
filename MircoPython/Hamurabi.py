@@ -178,5 +178,4 @@ else:
     print("FRANKLY, HATE YOUR GUTS!!")
 
 bell()
-print("\n\nSO LONG FOR NOW.")
-sys.exit()
+print("\n\nSO LONG FOR NOW.\n")
