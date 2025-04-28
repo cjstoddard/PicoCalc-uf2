@@ -1,3 +1,9 @@
+# If you do not have a Pico W/2W or you don't want
+# the PicoCalc to connect to your Wifi at boot,
+# go to the bottom and cooment out the last line
+# like this;
+# #safe_connect_wifi(WIFI_SSID, WIFI_PASSWORD)
+
 import machine
 import sdcard
 import os
