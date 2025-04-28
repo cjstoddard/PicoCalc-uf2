@@ -6,6 +6,7 @@ import sys
 from picocalc_system import initsd as initsd
 from picocalc_system import killsd as killsd
 from pye import pye_edit
+from picocalc_system import run
 # Mount SD card to /sd on boot
 
 pc_display = PicoDisplay(320,320)#display
