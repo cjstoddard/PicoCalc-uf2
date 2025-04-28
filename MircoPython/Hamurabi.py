@@ -13,11 +13,7 @@ def think_again_land(land):
 def impossible_request():
     print("\nHAMURABI: I CANNOT DO WHAT YOU WISH.")
     print("GET YOURSELF ANOTHER STEWARD!!!!!")
-    sys.exit()
-
-def bell():
-    for _ in range(10):
-        print("\a", end='')
+    quit()
 
 # Initialize variables
 year = 0
@@ -144,7 +140,7 @@ for year in range(1, 11):
             print("DUE TO THIS EXTREME MISMANAGEMENT YOU HAVE NOT ONLY")
             print("BEEN IMPEACHED AND THROWN OUT OF OFFICE BUT YOU HAVE")
             print("ALSO BEEN DECLARED NATIONAL FINK!!!!")
-            sys.exit()
+            quit()
     else:
         starved = 0
         percent_starved = 0
@@ -177,5 +173,5 @@ else:
     print("THE PEOPLE (REMAINING) FIND YOU AN UNPLEASANT RULER AND,")
     print("FRANKLY, HATE YOUR GUTS!!")
 
-bell()
 print("\n\nSO LONG FOR NOW.\n")
+quit()
