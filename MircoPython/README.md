@@ -8,12 +8,16 @@ I added Tomato.py and face_monitor.py. [Tomato is an idea I came up with](https:
 > face_monitor.init()
 >
 > while True:
+>
 >    face_monitor.update()
+>
 >    time.sleep(0.1)
 
 Face_monitor.py uses the lower right of the screen, so plan accordingly.
 
 I am still working on using images rather than emjois, I think it gives a more looks better RadicalEdward vibe and just looks all around better.
+
+I have also fixed the Hamurabi.bas bug, I uploaded it, but I have not had a chance to actually test it yet.
 
 Update 4-28-2025
 I am aware of the bug in Hamurabi.bas that was rebooting the PicoCalc at the end of the game. I am fiddling with other things at the moment, I will get to it shortly. In the meantime, I changed it so it just errors out without rebboting the device.

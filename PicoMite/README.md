@@ -1,5 +1,8 @@
 # PicoMite Basic Projects
 
+Update 4-29-2025
+I added onboot.bas, which is a simple program I run after the device is booted. It sest the date from the internet, prints the IP address and changes the default drive to the SD card. To use this program, you will need to set the Wifi options in the firmware, you will also need to change the -5 to your timezone. I don't autorun it, because most of the time it will run before the PicoCalc gets an IP address from the router.
+
 Update 4-20-2025
 I found a slightly newer version of RndDungeon.bas which included a trap mechanic.
 
