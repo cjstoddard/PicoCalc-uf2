@@ -1,5 +1,8 @@
 # PicoMite Basic Projects
 
+Update 4-30-2025
+I added Picogotchi.bas.This is a PicoMite Basic variant of my Micropython Tomato code. I actually like the way this works better than Tomato, so I will probably rebuild Tomato to work like this program. Picogotchi does some base line system monitoring and then displays a little face that looks around and expresses moods. The SimulateWork() function is there just to have something to do. You should replace this function with something useful.
+
 Update 4-29-2025
 I added onboot.bas, which is a simple program I run after the device is booted. It sest the date from the internet, prints the IP address and changes the default drive to the SD card. To use this program, you will need to set the Wifi options in the firmware, you will also need to change the -5 to your timezone. I don't autorun it, because most of the time it will run before the PicoCalc gets an IP address from the router.
 
