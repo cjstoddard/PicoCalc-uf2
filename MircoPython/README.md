@@ -1,5 +1,8 @@
 # MicroPython Projects
 
+Update 5-2-2025
+Uploaded chatgpt.py and secrets.py. The Youtuber sn0ren did a video covering the PicoCalc and one of the things he talked about was using [MicroPython to access ChatGPT](https://www.youtube.com/watch?v=-d8Hj0SEFR0). He however never shows us the code. He said he went to ChatGPT and asked it to write the program for him, so I did the same thing. Yes, this program was written enirely by ChatGPT. You will need a Raspberry Pi Pico W or a 2W for this program to run. You will also need to get an API key from OpenAI, it will cost you a couple dollars to load your account, but $10 will be more than enough for this program to run for a long time. Once you have an API key, open the secrets.py file and fill in your Wifi SSID, password and API key. You should be able to run the progam and talk to ChatGPT and get responses.
+
 Update 4-29-2025
 I added Tomato.py and face_monitor.py. [Tomato is an idea I came up with](https://github.com/cjstoddard/Tomato) for another project. The idea was to emulate the Tomato Computer used by RadicalEdward in the Cowboy Bebop series. This a scaled down version of that project, using ASCI emoji's instaed of images. Face_monitor.py is Tomato.py packaged up so it can be imported into other programs. Place Face_monitor.py in the folder with your program or in a lib folder and add the following to your program.
 
