@@ -1,3 +1,6 @@
+# chatgpt.py
+# Code by ChatGPT
+
 import network
 import urequests
 import time
