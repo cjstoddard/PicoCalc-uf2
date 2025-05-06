@@ -14,12 +14,15 @@ Next we need to change the autologin to the new user account.
 Change the file from this;
 
 > #!/bin/bash
+>
 > /bin/login -f root
 
 to look like this;
 
 > #!/bin/bash
+>
 > #/bin/login -f root
+>
 > /bin/login -f username
 
 Now we need to add the user to the list of users who can use sudo, to get root access.
@@ -38,11 +41,14 @@ Now reboot the system and you will be brought to a traditional Linux command lin
 
 > sudo su -
 
-Do that now and choose bash.sh from the menu and exectute these commans;
+Do that now and choose bash.sh from the menu and exectute these commands;
 
 > cp command-launcher/system/*.sh /usr/local/bin
+>
 > cp command-launcher/wifi/*.sh /usr/local/bin
+>
 > cp command-launcher/sound/*.sh /usr/local/bin
+>
 > chown root:root /usr/local/bin/*.sh
 
 This will place the setup commands somewhere your user account can run them. You will need to fix wifi-up.sh so it properly calls sync-time.sh.
@@ -60,7 +66,9 @@ to
 Now you need to update your path to include /usr/local/bin, and add a bit of color to your prompt with these commands.
 
 > echo 'PATH="/usr/bin:/usr/sbin:/usr/local/bin"' >> /etc/profile
+>
 > echo 'export PATH' >> /etc/profile
+>
 > echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '"  >> /etc/bash.bashrc
 
 Now it is time to reboot the system again. Type exit and press enter, you should go back to the command-launcher. Go down to system and press enter, then choose reboot.sh and press enter. The system should reboot and when it comes back up, you should be logged into you new user account. To connect to your network type "sudo wifi-up.sh" and press enter. You should be good to go.
