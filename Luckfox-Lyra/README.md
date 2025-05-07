@@ -44,6 +44,10 @@ Now reboot the system and you will be brought to a traditional Linux command lin
 
 Do that now and choose bash.sh from the menu and exectute these commands;
 
+> cp command-launcher/games/*.sh /usr/local/bin
+>
+> cp command-launcher/net/*.sh /usr/local/bin
+>
 > cp command-launcher/system/*.sh /usr/local/bin
 >
 > cp command-launcher/wifi/*.sh /usr/local/bin
