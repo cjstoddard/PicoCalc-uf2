@@ -1,5 +1,8 @@
 # MicroPython Projects
 
+Update 5-7-2025
+I have abondoned using Micropython on my PicoCalc and have instead went the route of installing a Lyra board in to. I deleted Tomato and Face-Monitor as neither ever worked the way I wanted them to. The others I will leave here until I get tired of looking at them.
+
 Update 5-2-2025
 Uploaded chatgpt.py and secrets.py. The Youtuber sn0ren did a video covering the PicoCalc and one of the things he talked about was using [MicroPython to access ChatGPT](https://www.youtube.com/watch?v=-d8Hj0SEFR0). He however never shows us the code. He said he went to ChatGPT and asked it to write the program for him, so I did the same thing. Yes, this program was written enirely by ChatGPT. You will need a Raspberry Pi Pico W or a 2W for this program to run. You will also need to get an API key from OpenAI, it will cost you a couple dollars to load your account, but $10 will be more than enough for this program to run for a long time. Once you have an API key, open the secrets.py file and fill in your Wifi SSID, password and API key. You should be able to run the progam and talk to ChatGPT and get responses.
 
