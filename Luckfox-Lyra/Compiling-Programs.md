@@ -32,6 +32,8 @@ Next, I want to make a place where we can place our newly compiled programs, so 
 >
 > cd src
 
+Before we start compiling programs, it is improtant to note that you need to read the install documents that are usually included with the source code. The build process varies wildly between projects, so before you do anything else, read the instructions and adapt them to what needs to be done here. You will want to pay special attention to things like "./configure --prefix=" options, because you do not want to install the programs on the Pi, you want to contain the install, so it can be easily transfered to the PicoCalc.
+
 Now we start building programs.
 
 ----------
@@ -87,6 +89,10 @@ When I first compiled MMBasic, the build failed because I was missing a needed d
 You will notice there is an extra couple of steps in the Joe build. This is because Joe needed libtinfo.so.6, but it was not on the PicoCalc and when I originally tried it, I got a library missing error. If this happens to you, use this command to find the library you are missing.
 
 > ldd programname
+
+Example;
+
+> ldd ~/bin/joe/bin/joe
 
 This will tell you what is missing. Now go back to the Pi Zero and do the same thing, it will tell you where the library is at, just copy that file to your SD card, take it back to your PicoCalc and copy it to the location where it was on the Pi Zero, if in doubt, just put it in /lib.
 
