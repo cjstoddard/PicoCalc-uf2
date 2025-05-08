@@ -37,29 +37,46 @@ Now we start building programs.
 ----------
 MMBasic for Linux (Basic interpreter)
 > git clone --recursive https://github.com/thwill1000/mmb4l.git
+>
 > cd mmb4l
+>
 > sudo apt install libsdl2-dev
+>
 > ./build.sh
+>
 > cp build/build-release-armv6l-raspbian-11-gcc-20210110/mmbasic ~/bin/
+>
 > cd ..
 
 ----------
 Joe (Emacs like text editor)
 > wget https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz
+>
 > tar -xvzkf.tar.gz
+>
 > cd joe-4.6
+>
 > ./autojoe
+>
 > ./configure --prefix=$HOME/bin/joe
+>
 > make
+>
 > make install
+>
 > cp /lib/arm-linux-gnueabihf/libtinfo.so.6 ~/bin/joe/bin/libtinfo.so.6
+>
 > echo "#!/bin/sh" > ~/bin/joe.sh
+>
 > echo "~/bin/joe/bin/joe" >> ~/bin/joe.sh
+>
 > chmod +x ~/bin/joe.sh
+>
 > cd ..
 
 Note: When you copy it over to the PicoCalc, you will need to run these commands;
 > sudo cp ~/bin/joe/bin/libtinfo.so.6 /lib
+>
 > sudo chown root:root /lib/libtinfo.so.6
 
 ----------
