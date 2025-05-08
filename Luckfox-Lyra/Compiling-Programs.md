@@ -52,7 +52,7 @@ MMBasic for Linux (Basic interpreter)
 Joe (Emacs like text editor)
 > wget https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz
 >
-> tar -xvzkf.tar.gz
+> tar -xvzkf joe-4.6.tar.gz
 >
 > cd joe-4.6
 >
