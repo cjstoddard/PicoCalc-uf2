@@ -96,4 +96,4 @@ Example;
 
 This will tell you what is missing. Now go back to the Pi Zero and do the same thing, it will tell you where the library is at, just copy that file to your SD card, take it back to your PicoCalc and copy it to the location where it was on the Pi Zero, if in doubt, just put it in /lib.
 
-Honestly, this is probably not the best way to do this. Setting up a desktop system or even a virtual machine to do the building is faster and give you the same results. However if all you want to do is compile a couple of programs and move on with your life, this will do just fine.
+Honestly, this is probably not the best way to do this. This is not a perfect solution and some programs are just not going to build. It is frustrating, I know. Setting up a desktop system or even a virtual machine to do the building is faster and give you the same results. However until the Lyra buildroot is updated to include a more complete tool chain and if all you want to do is compile a couple of programs and move on with your life, this will do just fine.
