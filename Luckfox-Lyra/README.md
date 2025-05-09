@@ -1,5 +1,9 @@
 # PicoCalc Luckfox Lyra Mod
 
+Please check out my Ebook reader, written specifically for PicoCalc's with the Lyra boards.
+
+https://github.com/cjstoddard/PCL-Ebook-Reader
+
 Note: In case you have never used the nano text editor, once you have finished editing a file, press Ctrl-x, y, ENTER. This will save the file and exit nano. You can use vi like a savage if you want to, but don't blame me if you can't figure out how to save and exit a file.
 
 The Linux build for the Lyra auto boots to tmux running a command launcher. This is fine for what it does, but I prefer a more traditional Linux login process, I don't need any hand holding. Second, it automatically logs you into the root account, which is a bad practice, don't do it and if you do, I don't want hear hear about it when you inevitably screw up you operating system. To fix these two problems, we need to do a few steps. First we need to setup a non root user login. Substitute the user name you want to use with all occurances of "username".
