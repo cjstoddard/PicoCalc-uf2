@@ -1,6 +1,6 @@
 # PicoCalc Luckfox Lyra Mod
 
-Please check out my Ebook reader, written specifically for PicoCalc's with the Lyra boards.
+Please check out my Ebook reader, written specifically for PicoCalc's with the Lyra boards in mind.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
 
