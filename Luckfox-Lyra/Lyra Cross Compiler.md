@@ -6,7 +6,7 @@ However, after talking to a few people about it, they seemed to be confused abou
 
 Before getting started, there is one caveat to using the buildroot. While it cmpiles things much quicker than either the Lyra, it has all the limitation the PicoCalc Lyra Linux has. It is missing tools like cmake and autogen, it is also missing more than a few development libraries. So some programs will just have to be built using the Pi Zero environment.
 
-I am assuming you have some basic working knowledge of using LinuxThe first thing you will need is a system running Linux. If you do not have a Linux box laying around, a virtual machine or WSL will work just fine.
+I am assuming you have some basic working knowledge of using Linux. The first thing you will need is a system running Linux. If you do not have a Linux box laying around, a virtual machine or WSL will work just fine.
 
 Next, to compile programs for PicoCalc Lyra Linux, you will need the tools and libraries. You can get what you need here in the sdk-buildroot folder;
 
