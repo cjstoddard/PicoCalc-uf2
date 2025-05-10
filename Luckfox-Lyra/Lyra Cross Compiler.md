@@ -50,3 +50,22 @@ Many program Makefiles have a "make install" option, if this is the case, copy t
 
 That is pretty much it.
 
+Update:
+I have not tested cmake yet, ./autogen.sh and ./configure do work. However I did have to use "--host=arm-buildroot-linux-gnueabihf" switch with configure.
+
+Joe (Emacs like text editor)
+> wget https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz
+>
+> tar -xvzkf joe-4.6.tar.gz
+>
+> cd joe-4.6
+>
+> ./autojoe
+>
+> ./configure --prefix=/usr/local --host=arm-buildroot-linux-gnueabihf
+>
+> make
+
+Once this is done, copy the joe-4.6 folder to your SDcard, then put it in your PicoCalc, boot it up, then navigate to the folder and run "make install", and all should work.
+
+As a side note, your SDcard will need to be formatted as ext4, fat32 does not play well with some linux file types. Once you have formatted it as ext4, create a folder on the SDcard and change the ownership to your user account. I then make a link from that folder on the SDcard to my home folder for easier navigation.
