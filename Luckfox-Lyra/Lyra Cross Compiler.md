@@ -46,7 +46,7 @@ The tv program should compile with no errors. Other programs may give you warnin
 
 This will check the program for its dependencies. If things went correctly, the output will read "not a dynamic executable", if it outputs a list of dependencies, something went wrong and you should begin again. If all went well, copy the program to your SDcard or transfer it over using scp and give it a try.
 
-Many program Makefiles have a "make install" option, if this is the case, copy the whole folder over to the SDcard and then when you get to the PicoCalc, run the final "make install" on the PicoCalc so everything is put into the correct place.
+Many program Makefiles have a "make install" option, if this is the case, copy the whole folder over to the SDcard and then when you get to the PicoCalc, run the final "sudo make install" on the PicoCalc so everything is put into the correct place.
 
 That is pretty much it.
 
