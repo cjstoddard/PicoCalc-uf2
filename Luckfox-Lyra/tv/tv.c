@@ -1,5 +1,6 @@
-/* textreader.c
-Code by Chris Stoddard */
+/* tv.c
+Code by Chris Stoddard
+Usage tv YourTextFile.txt */
 
 #include <ncurses.h>
 #include <stdlib.h>

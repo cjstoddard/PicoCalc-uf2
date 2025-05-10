@@ -3,8 +3,6 @@ CC        = $(CROSS_COMPILE)gcc
 
 SYSROOT   = $(shell $(CC) --print-sysroot)
 
-PROCS     = -j8
-
 TARGET    = tv
 
 SRC       = tv.c
