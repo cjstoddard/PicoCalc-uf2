@@ -8,7 +8,7 @@ Before getting started, there is one caveat to using the buildroot. While it cmp
 
 I am assuming you have some basic working knowledge of using LinuxThe first thing you will need is a system running Linux. If you do not have a Linux box laying around, a virtual machine or WSL will work just fine.
 
-Next, to compile programs for PicoCalc Lyra Linux, you will need the tools and libraries. You can get what you need here;
+Next, to compile programs for PicoCalc Lyra Linux, you will need the tools and libraries. You can get what you need here in the sdk-buildroot folder;
 
 https://drive.google.com/drive/folders/1TBEso7NFkO7e6z8iEBywjxi4EtJHSz4F
 
