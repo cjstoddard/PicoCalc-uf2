@@ -97,3 +97,31 @@ Example;
 This will tell you what is missing. Now go back to the Pi Zero and do the same thing, it will tell you where the library is at, just copy that file to your SD card, take it back to your PicoCalc and copy it to the location where it was on the Pi Zero, if in doubt, just put it in /lib.
 
 Honestly, this is probably not the best way to do this. This is not a perfect solution and some programs are just not going to build. It is frustrating, I know. Setting up a desktop system or even a virtual machine to do the building is faster and give you the same results. However until the Lyra buildroot is updated to include a more complete tool chain and if all you want to do is compile a couple of programs and move on with your life, this will do just fine.
+
+Update 5-11-2025:
+
+Nethack does not compile on the PicoCalc Lyra or in the buildroot, but it does compile on the Raspberry Pi Zero.
+
+nethack (Old school dungeon crawl classic)
+> wget https://www.nethack.org/download/3.6.7/nethack-367-src.tgz
+>
+> tar -xvzf nethack-367-src.tgz
+>
+> cd NetHack-3.6.7/sys/unix
+>
+> sh setup.sh hints/linux
+>
+> cd ../..
+> make all
+
+Copy to PicoCalc
+
+> make install
+>
+> echo '#!/bin/bash' > nh.sh
+> echo '~/nh/install/games/nethack' >> nh.sh
+> sudo cp nh.sh /usr/local/bin
+> sudo chmod +x /usr/local/bin/nh.sh
+> sudo chown root:root /usr/local/bin/nh.sh
+
+Type nh.sh toplay the game.
