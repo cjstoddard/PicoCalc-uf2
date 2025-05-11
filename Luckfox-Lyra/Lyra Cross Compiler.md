@@ -67,6 +67,6 @@ Joe (Emacs like text editor)
 >
 > make
 
-Once this is done, copy the joe-4.6 folder to your SDcard, then put it in your PicoCalc, boot it up, then navigate to the folder and run "make install", and all should work.
+Once this is done, copy the joe-4.6 folder to your SDcard, then put it in your PicoCalc, boot it up, then navigate to the folder and run "sudo make install", and all should work.
 
 As a side note, your SDcard will need to be formatted as ext4, fat32 does not play well with some linux file types. Once you have formatted it as ext4, create a folder on the SDcard and change the ownership to your user account. I then make a link from that folder on the SDcard to my home folder for easier navigation.
