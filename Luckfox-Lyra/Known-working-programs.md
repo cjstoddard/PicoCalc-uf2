@@ -8,7 +8,7 @@ If you wish to contribute to this list, open an issue, provide me with the name 
 
 cfiles (Text mode file manager)
 
-Compiles on the PicoCalc natively.
+Compiles on the PicoCalc natively. Builds in just a few seconds.
 
 > git clone https://github.com/mananapr/cfiles.git
 >
@@ -73,13 +73,13 @@ Note: When you copy it over to the PicoCalc, you will need to run these commands
 >
 > make
 
-Once this is done, copy the joe-4.6 folder to your SDcard, then put it in your PicoCalc, boot it up, then navigate to the folder and run "sudo make install", and all should work.
+Once this is done, copy the joe-4.6 folder to your SDcard, or transfer it over using scp, then navigate to the folder and run "sudo make install", and all should work.
 
 ====================
 
 MMBasic for Linux (Basic interpreter)
 
-Compiles on the Raspberry Pi Zero.
+Compiles on the Raspberry Pi Zero. This takes a while to build, go have lunch or watch a movie while this builds.
 
 > git clone --recursive https://github.com/thwill1000/mmb4l.git
 >
@@ -95,13 +95,11 @@ Compiles on the Raspberry Pi Zero.
 
 Now copy the mmbasic program over to your PicoCalc, either with the SDcard or with scp and copy it to /usr/bin or /usr/local/bin.
 
-Note: This takes a while to build, be patient.
-
 ====================
 
 nethack (Old school dungeon crawl classic)
 
-Compiles on the Raspberry Pi Zero.
+Compiles on the Raspberry Pi Zero. This takes some time to build, but its not too bad.
 
 > wget https://www.nethack.org/download/3.6.7/nethack-367-src.tgz
 >
@@ -144,7 +142,7 @@ Note: His buildroot configuration is more or less the same as mine, he just chos
 
 PicoCalc Lyra Ebook Reader
 
-Compiles on the PicoCalc natively.
+Compiles on the PicoCalc natively. Builds in just a few seconds.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
 
