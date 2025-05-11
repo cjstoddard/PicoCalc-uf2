@@ -6,7 +6,7 @@ If you wish to contribute to this list, open an issue, provide me with the name 
 
 ====================
 
-cfiles (text mode file manager)
+cfiles (Text mode file manager)
 
 Compiles on the PicoCalc natively.
 

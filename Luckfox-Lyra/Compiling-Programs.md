@@ -1,4 +1,4 @@
-# Compiling programs
+# Compiling programs with a Raspberry Pi Zero
 
 The PicoCalc Lyra Linux build lacks the development tools and libraries needed to build many programs. The buildroot sdk does not make it easy to add these things. Plus it is counter productive to rebuild a whole new image to add a single program. The goal here is to make a development environment anyone can duplicate and build the programs they want to use, then copy the program to an SD card or use scp to transfer the program to the PicoCalc.
 

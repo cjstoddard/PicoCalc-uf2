@@ -1,4 +1,4 @@
-# Using the Lyra Cross Compiler Environment
+# Compiling programs with the Lyra Cross Compiler Environment
 
 In my other post about using a Raspberry Pi Zero to compile programs for a PicoCalc using the Lyra mod, I mentioned setting up a desktop system or even a virtual machine to do the building is faster and give you the same results. Well, I got asked how to do that. Originally I really did not want to mess around with it, mainly because my experience with cross compiling has been a mixed bag.
 
