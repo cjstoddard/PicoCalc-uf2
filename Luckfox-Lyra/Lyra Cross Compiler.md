@@ -57,7 +57,7 @@ I have not tested cmake yet, but I suspect it will work. I have tested ./autogen
 Joe (Emacs like text editor)
 > wget https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz
 >
-> tar -xvzkf joe-4.6.tar.gz
+> tar -xvzf joe-4.6.tar.gz
 >
 > cd joe-4.6
 >
