@@ -2,6 +2,8 @@
 
 This is a list of programs I have successfully built and run on my PicoCalc with the Luckfox Lyra board modification, running hiptoot's Lyra Linux build. There are three ways to accomplish this; natively on the PicoCalc, using hiptoot's [buildroot](https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Lyra%20Cross%20Compiler.md) environment and using a [Raspberry Pi Zero](https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Compiling-Programs.md). Some programs will compile on all three, however compiling programs natively or on the Pi Zero can be slow (and I do mean slow), so even if it will compile in those envrionments, large programs should use the buildroot if possible.
 
+If you wish to contribute to this list, open an issue, provide me with the name of the program, what environment you used to compile it and step by step instructions for building and installing it. If your have a github or other site that walks though the process, you can just provide the link, and I will add it to the list as quick as I can.
+
 ====================
 
 cfiles (text mode file manager)
