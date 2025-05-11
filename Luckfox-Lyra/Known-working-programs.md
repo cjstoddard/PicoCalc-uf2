@@ -87,9 +87,11 @@ Compiles on the Raspberry Pi Zero.
 >
 > ./build.sh
 >
-> cp build/build-release-armv6l-raspbian-11-gcc-20210110/mmbasic ~/bin/
+> cp build/build-release-armv6l-raspbian-11-gcc-20210110/mmbasic ~/
 >
-> cd ..
+> cd
+
+Now copy the mmbasic program over to your PicoCalc, either with the SDcard or with scp and copy it to /usr/bin or /usr/local/bin.
 
 Note: This takes a while to build, be patient.
 
