@@ -4,7 +4,7 @@ In my other post about using a Raspberry Pi Zero to compile programs for a PicoC
 
 However, after talking to a few people about it, they seemed to be confused about what even to do with the buildroot provided by the forum user hisptoot. Honestly, it is not that hard to do, but if you have never done it before, it can be a challenge, however hisptoot's buildroot file actually goes a long way towards making it easier to do. So here is the step by step process of getting the buildroot environment up and running, along with a small program you can build to ensure everything is working.
 
-Before getting started, there is one caveat to using the buildroot. While it cmpiles things much quicker than either the Lyra, it has all the limitation the PicoCalc Lyra Linux has. It is missing tools like cmake and autogen, it is also missing more than a few development libraries. So some programs will just have to be built using the Pi Zero environment.
+Before getting started, there is one caveat to using the buildroot. While it compiles things much quicker than either the Lyra, it has all the limitation the PicoCalc Lyra Linux has. It is missing more than a few development libraries. So some programs will just have to be built using the Pi Zero environment.
 
 I am assuming you have some basic working knowledge of using Linux. The first thing you will need is a system running Linux. If you do not have a Linux box laying around, a virtual machine or WSL will work just fine.
 
@@ -51,7 +51,8 @@ Many program Makefiles have a "make install" option, if this is the case, copy t
 That is pretty much it.
 
 Update:
-I have not tested cmake yet, ./autogen.sh and ./configure do work. However I did have to use "--host=arm-buildroot-linux-gnueabihf" switch with configure.
+
+I have not tested cmake yet, but I suspect it will work. I have tested ./autogen.sh and ./configure they do seem to work. However I did have to use "--host=arm-buildroot-linux-gnueabihf" switch with configure. 
 
 Joe (Emacs like text editor)
 > wget https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz
