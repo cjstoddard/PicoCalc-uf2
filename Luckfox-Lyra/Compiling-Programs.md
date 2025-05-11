@@ -114,7 +114,7 @@ nethack (Old school dungeon crawl classic)
 > cd ../..
 > make all
 
-Copy to PicoCalc
+Copy the entire NetHack-3.6.7 to the PicoCalc, then loginto the PicoCalc, cd into the NetHack-3.6.7 directory, and type the following commands;
 
 > make install
 >
@@ -124,4 +124,4 @@ Copy to PicoCalc
 > sudo chmod +x /usr/local/bin/nh.sh
 > sudo chown root:root /usr/local/bin/nh.sh
 
-Type nh.sh toplay the game.
+Type nh.sh to play the game.
