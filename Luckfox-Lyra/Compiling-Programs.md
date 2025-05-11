@@ -119,9 +119,13 @@ Copy the entire NetHack-3.6.7 directory to the PicoCalc, then loginto the PicoCa
 > make install
 >
 > echo '#!/bin/bash' > nh.sh
+>
 > echo '~/nh/install/games/nethack' >> nh.sh
+>
 > sudo cp nh.sh /usr/local/bin
+>
 > sudo chmod +x /usr/local/bin/nh.sh
+>
 > sudo chown root:root /usr/local/bin/nh.sh
 
 Type nh.sh to play the game.
