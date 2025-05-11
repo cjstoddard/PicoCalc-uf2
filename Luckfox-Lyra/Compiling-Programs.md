@@ -114,7 +114,7 @@ nethack (Old school dungeon crawl classic)
 > cd ../..
 > make all
 
-Copy the entire NetHack-3.6.7 to the PicoCalc, then loginto the PicoCalc, cd into the NetHack-3.6.7 directory, and type the following commands;
+Copy the entire NetHack-3.6.7 directory to the PicoCalc, then loginto the PicoCalc, cd into the NetHack-3.6.7 directory, and type the following commands;
 
 > make install
 >
