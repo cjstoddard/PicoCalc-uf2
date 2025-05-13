@@ -172,4 +172,18 @@ https://github.com/cjstoddard/PCL-Ebook-Reader
 
 ====================
 
+tty-clock (ncurses clock)
+
+Compiles on the Pi Zero.
+
+> git clone https://github.com/xorg62/tty-clock.git
+>
+> cd tty-clock
+>
+> make
+
+Copy the entire tty-clock directory to the PicoCalc and run "make install"
+
+====================
+
 
