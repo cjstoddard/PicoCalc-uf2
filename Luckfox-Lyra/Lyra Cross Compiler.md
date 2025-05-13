@@ -1,5 +1,7 @@
 # Compiling programs with the Lyra Cross Compiler Environment
 
+I maintain a list of [Known Working Programs](https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Known-working-programs.md)
+
 In my other post about using a Raspberry Pi Zero to compile programs for a PicoCalc using the Lyra mod, I mentioned setting up a desktop system or even a virtual machine to do the building is faster and give you the same results. Well, I got asked how to do that. Originally I really did not want to mess around with it, mainly because my experience with cross compiling has been a mixed bag.
 
 However, after talking to a few people about it, they seemed to be confused about what even to do with the buildroot provided by the forum user hisptoot. Honestly, it is not that hard to do, but if you have never done it before, it can be a challenge, however hisptoot's buildroot file actually goes a long way towards making it easier to do. So here is the step by step process of getting the buildroot environment up and running, along with a small program you can build to ensure everything is working.

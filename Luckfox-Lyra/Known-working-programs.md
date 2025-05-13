@@ -77,6 +77,30 @@ Once this is done, copy the joe-4.6 folder to your SDcard, or transfer it over u
 
 ====================
 
+LinksWWWbrowser (Text mode web browser)
+
+This compiles locally, on the Pi Zero and in the buildroot.
+
+> git clone https://github.com/nmbazima/LinksWWWbrowser.git
+>
+> cd LinksWWWbrowser
+>
+> chmod +x configure
+>
+> chmod +x missing
+>
+> mkdir build && cd build
+>
+> ../configure --disable-utf8 --without-gpm --without-zlib --without-x --without-libjpeg --without-libtiff --without-librsvg --prefix=/usr/local
+>
+> make
+
+If you are compiling this on the PicoCalc, you just need to type "make install". If you are using the Pi Zero or the buildroot, you will need to copy the entire LinksWWWbrowser directory over to the PicoCalc and then run "make install" on the PicoCalc.
+
+Note: If you are using the buildroot cross compiler, add --host=arm-buildroot-linux-gnueabihf to the end of the ./configure command.
+
+====================
+
 MMBasic for Linux (Basic interpreter)
 
 Compiles on the Raspberry Pi Zero. This takes a while to build, go have lunch or watch a movie while this builds.
