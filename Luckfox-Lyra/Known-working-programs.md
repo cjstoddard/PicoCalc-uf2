@@ -188,15 +188,11 @@ This builds locally on the PicoCalc Lyra. Individually each one takes several mi
 
 Substitute pdp10 with whatever simulator you want to build. I am not 100% sure all of them will build, but the few I built did work, so YMMV. The next steps are for downloading a quick and easy preconfigured pdp10 setup called [TOPS-in-a-Box](https://www.filfre.net/2011/05/tops-10-in-a-box/). It is a fairly complete TOPS PDP10 setup, please, please read the README.txt file before running it, so you know what to do.
 
-> wget https://www.filfre.net/misc/TOPS-10.zip
->
-> unzip TOPS-10.zip
->
 > mkdir tops
 >
-> mv TOPS-10.zip tops/
->
 > cd tops
+>
+> wget https://www.filfre.net/misc/TOPS-10.zip
 >
 > unzip TOPS-10.zip
 >
