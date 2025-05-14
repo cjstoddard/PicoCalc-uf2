@@ -172,6 +172,40 @@ https://github.com/cjstoddard/PCL-Ebook-Reader
 
 ====================
 
+simh (Historic simulator of classic computers)
+
+This builds locally on the PicoCalc Lyra. Individually each one takes several minutes to compile. If you try to make them all, it will probably take several hours. I recommend just building the ones you are actually interested in. For more information and additional software kits, please vist the [Computer Simulation and History](https://simh.trailing-edge.com/) site.
+
+> git clone https://github.com/simh/simh.git
+>
+> cd simh
+>
+> make pdp10
+>
+> sudo cp BIN/pdp10 /usr/local/bin
+>
+> cd
+
+Substitute pdp10 with whatever simulator you want to build. I am not 100% sure all of them will build, but the few I built did work, so YMMV. The next steps are for downloading a quick and easy preconfigured pdp10 setup called [TOPS-in-a-Box](https://www.filfre.net/2011/05/tops-10-in-a-box/). It is a fairly complete TOPS PDP10 setup, please, please read the README.txt file before running it, so you know what to do.
+
+> wget https://www.filfre.net/misc/TOPS-10.zip
+>
+> unzip TOPS-10.zip
+>
+> mkdir tops
+>
+> mv TOPS-10.zip tops/
+>
+> cd tops
+>
+> unzip TOPS-10.zip
+>
+> pdp10 tops10.cfg
+
+
+
+====================
+
 tty-clock (ncurses clock)
 
 Compiles on the Pi Zero.
