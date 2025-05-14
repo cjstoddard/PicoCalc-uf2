@@ -198,6 +198,8 @@ Substitute pdp10 with whatever simulator you want to build. I am not 100% sure a
 >
 > pdp10 tops10.cfg
 
+Note: to exit the simulator press ctrl-e, this will take you to the sim> prompt, type exit to go back to the Linux command prompt.
+
 ====================
 
 tty-clock (ncurses clock)
