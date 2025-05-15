@@ -24,7 +24,7 @@ Note: Do not use the Makefile, it will try to use the ncursesw library and fail 
 
 ====================
 
-fbv (FrameBuffer Viewer)
+fbv (FrameBuffer Image Viewer)
 
 Pointed out to me by Clockworkpi forum member michael_mayer.
 
