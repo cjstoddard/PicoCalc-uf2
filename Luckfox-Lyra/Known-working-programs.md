@@ -24,6 +24,26 @@ Note: Do not use the Makefile, it will try to use the ncursesw library and fail 
 
 ====================
 
+fbv (FrameBuffer Viewer)
+
+Pointed out to me by Clockworkpi forum member michael_mayer.
+
+Compiles locally, takes just a few seconds to build.
+
+> git clone https://github.com/godspeed1989/fbv.git
+>
+> cd fbv
+>
+> ./configure
+>
+> make
+> 
+> sudo make install
+
+Note: You may have to add your user name to the video group to use.
+
+====================
+
 Joe (Emacs like text editor)
 
 Compiles on the Raspberry Pi Zero or in the buildroot.
