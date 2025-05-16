@@ -15,7 +15,7 @@ If you wish to contribute to this list, open an issue, provide me with the name 
 - simh (Historic simulator of classic computers)
 - tty-clock (ncurses clock)
 
-====================
+---
 
 cfiles (Text mode file manager)
 
@@ -33,7 +33,7 @@ Compiles on the PicoCalc natively. Builds in just a few seconds.
 
 Note: Do not use the Makefile, it will try to use the ncursesw library and fail to build.
 
-====================
+---
 
 fbv (FrameBuffer Image Viewer)
 
@@ -53,7 +53,7 @@ Compiles locally, takes just a few seconds to build.
 
 Note: You may have to add your user name to the video group to use.
 
-====================
+---
 
 Joe (Emacs like text editor)
 
@@ -106,7 +106,7 @@ Note: When you copy it over to the PicoCalc, you will need to run these commands
 
 Once this is done, copy the joe-4.6 folder to your SDcard, or transfer it over using scp, then navigate to the folder and run "sudo make install", and all should work.
 
-====================
+---
 
 LinksWWWbrowser (Text mode web browser)
 
@@ -130,7 +130,7 @@ If you are compiling this on the PicoCalc, you just need to type "make install".
 
 Note: If you are using the buildroot cross compiler, add --host=arm-buildroot-linux-gnueabihf to the end of the ./configure command.
 
-====================
+---
 
 MMBasic for Linux (Basic interpreter)
 
@@ -150,7 +150,7 @@ Compiles on the Raspberry Pi Zero. This takes a while to build, go have lunch or
 
 Now copy the mmbasic program over to your PicoCalc, either with the SDcard or with scp and copy it to /usr/bin or /usr/local/bin.
 
-====================
+---
 
 nethack (Old school dungeon crawl classic)
 
@@ -183,7 +183,7 @@ Copy the entire NetHack-3.6.7 directory to the PicoCalc, then log into the PicoC
 
 Type nh.sh to play the game.
 
-====================
+---
 
 Picoarch (Frontend for game emulators)
 
@@ -193,7 +193,7 @@ https://github.com/gurubook/picoarch
 
 Note: His buildroot configuration is more or less the same as mine, he just chose a different top level directory name.
 
-====================
+---
 
 PicoCalc Lyra Ebook Reader
 
@@ -201,7 +201,7 @@ Compiles on the PicoCalc natively. Builds in just a few seconds.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
 
-====================
+---
 
 simh (Historic simulator of classic computers)
 
@@ -231,7 +231,7 @@ Substitute pdp10 with whatever simulator you want to build. I am not 100% sure a
 
 Note: to exit the simulator press ctrl-e, this will take you to the sim> prompt, type exit to go back to the Linux command prompt.
 
-====================
+---
 
 tty-clock (ncurses clock)
 
@@ -245,6 +245,6 @@ Compiles on the Pi Zero.
 
 Copy the entire tty-clock directory to the PicoCalc and run "make install"
 
-====================
+---
 
 
