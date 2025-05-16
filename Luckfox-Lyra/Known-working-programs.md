@@ -108,7 +108,7 @@ Once this is done, copy the joe-4.6 folder to your SDcard, or transfer it over u
 
 ---
 
-LinksWWWbrowser (Text mode web browser)
+Links WWW browser (Text mode web browser)
 
 This compiles locally, on the Pi Zero and in the buildroot.
 
