@@ -11,7 +11,7 @@ If you wish to contribute to this list, open an issue, provide me with the name 
 - MMBasic for Linux (Basic interpreter)
 - nethack (Old school dungeon crawl classic)
 - Picoarch (Frontend for game emulators)
-- PicoCalc Lyra Ebook Reader
+- PicoCalc Lyra Ebook and RSS Feed Readers
 - simh (Historic simulator of classic computers)
 - tty-clock (ncurses clock)
 
@@ -195,7 +195,7 @@ Note: His buildroot configuration is more or less the same as mine, he just chos
 
 ---
 
-PicoCalc Lyra Ebook Reader
+PicoCalc Lyra Ebook and RSS Feed Readers
 
 Compiles on the PicoCalc natively. Builds in just a few seconds.
 

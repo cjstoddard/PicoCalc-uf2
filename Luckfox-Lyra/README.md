@@ -1,6 +1,6 @@
 # PicoCalc Luckfox Lyra Mod
 
-Please check out my Ebook reader, written specifically for PicoCalc's with the Lyra boards in mind.
+Please check out my Ebook and RSS Feed readers, written specifically for PicoCalc's with the Lyra boards in mind.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
 
@@ -43,6 +43,18 @@ Look for this line towards the bottom of the file;
 Right underneath it, add this line;
 
 > username ALL=(ALL:ALL) NOPASSWD: ALL
+
+Before the first reboot, we must add your user account to the video group, without doing this, none of the games will likely work.
+
+> nano /etc/group
+
+Look for this line;
+
+> video:x:28:
+
+and add your username to the line;
+
+> video:x:28:username
 
 Now reboot the system and you will be brought to a traditional Linux command line. If you need to run the command-launcher as root to do things like start the Wifi or the sound, run this command;
 
