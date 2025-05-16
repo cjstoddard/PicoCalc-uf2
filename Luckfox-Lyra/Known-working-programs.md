@@ -4,6 +4,17 @@ This is a list of programs I have successfully built and run on my PicoCalc with
 
 If you wish to contribute to this list, open an issue, provide me with the name of the program, what environment you used to compile it and step by step instructions for building and installing it. If your have a github or other site that walks though the process, you can just provide the link, and I will add it to the list as quick as I can.
 
+- cfiles (Text mode file manager)
+- fbv (FrameBuffer Image Viewer)
+- Joe (Emacs like text editor)
+- Links WWW browser (Text mode web browser)
+- MMBasic for Linux (Basic interpreter)
+- nethack (Old school dungeon crawl classic)
+- Picoarch (Frontend for game emulators)
+- PicoCalc Lyra Ebook Reader
+- simh (Historic simulator of classic computers)
+- tty-clock (ncurses clock)
+
 ====================
 
 cfiles (Text mode file manager)
