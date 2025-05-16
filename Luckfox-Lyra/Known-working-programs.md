@@ -5,6 +5,7 @@ This is a list of programs I have successfully built and run on my PicoCalc with
 If you wish to contribute to this list, open an issue, provide me with the name of the program, what environment you used to compile it and step by step instructions for building and installing it. If your have a github or other site that walks though the process, you can just provide the link, and I will add it to the list as quick as I can.
 
 - cfiles (Text mode file manager)
+- emacs (Extensible, customizable text editor)
 - fbv (FrameBuffer Image Viewer)
 - Joe (Emacs like text editor)
 - Links WWW browser (Text mode web browser)
@@ -32,6 +33,28 @@ Compiles on the PicoCalc natively. Builds in just a few seconds.
 > sudo chown root:root /usr/local/bin/cf
 
 Note: Do not use the Makefile, it will try to use the ncursesw library and fail to build.
+
+---
+
+emacs (Extensible, customizable text editor)
+
+This must be compiled on a Raspberry Pi Zero. Emacs takes around 2 hours to build.
+
+> sudo apt install texinfo
+>
+> wget http://ftp.gnu.org/gnu/emacs/emacs-30.1.tar.gz
+>
+> tar -xvzf emacs-30.1.tar.gz
+>
+> cd emacs-30.1
+>
+> ./autogen.sh
+>
+> ./configure --prefix=/usr/local --without-all --without-x --with-x-toolkit=no --with-pop --without-gpm
+>
+> make
+
+Transfer the entire emacs-30.1 folder over to your PicoCalc, enter the folder and run "sudo make install".
 
 ---
 
