@@ -1,7 +1,5 @@
 # Compiling programs with a Raspberry Pi Zero
 
-I maintain a list of [Known Working Programs](https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Known-working-programs.md)
-
 The PicoCalc Lyra Linux build lacks the development tools and libraries needed to build many programs. The buildroot sdk does not make it easy to add these things. Plus it is counter productive to rebuild a whole new image to add a single program. The goal here is to make a development environment anyone can duplicate and build the programs they want to use, then copy the program to an SD card or use scp to transfer the program to the PicoCalc.
 
 I am a Linux user and have been since the 1990's, setting up a build environmet to cross compile programs is not really a problem for me. However, I understand that most people are neither Linux user nor developers, so setting something like that up can be a serious challenege. If you want to do this, there are plenty of good guides out there on the internet, or you can go ask ChatGPT.
