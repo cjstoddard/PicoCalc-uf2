@@ -1,98 +1,18 @@
-# PicoCalc Luckfox Lyra Mod
+# PicoCalc Lyra Linux
+
+Putting a Luckfox Lyra in a PicoCalc and installing PicoCalc Lyra Linux (PCL Linux) is one of the more interesting and flexible modifications you can make to a PicoCalc. Using this tinu Linux environment, lets you do pretty much everything you would want to do with the PicoCalc, without having to flash the device.
+
+With these pages, my goal is to help other people extend the usefulness of PCL Linux, because lets face it, the basic install is fairly limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a bit of work needs to be done.
+
+**Command Launcher Jailbreak:** Configure PCL Linux to boot into a proper linux user account and command line.
+
+**Known Working Programs:** This is a list of programs that I have successfully installed along with instructions for building and installing them.
+
+**Lyra Cross Compiler:** This is a guide to setting up and using the cross compiler enviroment on you desktop Linux machine.
+
+**Pi Zero Build Env:** A Raspberry Pi Zero can be setup and used to build programs for PCL Linux, the advantage to this is the Raspberry Pi OS a much better toolchain and a wider array of development libraries.
+
 
 Please check out my Ebook and RSS Feed readers, written specifically for PicoCalc's with the Lyra boards in mind.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
-
-I maintain a list of [Known Working Programs](https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Known-working-programs.md)
-
-Note: In case you have never used the nano text editor, once you have finished editing a file, press Ctrl-x, y, ENTER. This will save the file and exit nano. You can use vi like a savage if you want to, but don't blame me if you can't figure out how to save and exit a file.
-
-The Linux build for the Lyra auto boots to tmux running a command launcher. This is fine for what it does, but I prefer a more traditional Linux login process, I don't need any hand holding. Second, it automatically logs you into the root account, which is a bad practice, don't do it and if you do, I don't want hear hear about it when you inevitably screw up you operating system. To fix these two problems, we need to do a few steps. First we need to setup a non root user login. Substitute the user name you want to use with all occurances of "username".
-
-> mkdir /home
->
-> adduser username
-
-Next we need to change the autologin to the new user account.
-
-> nano /etc/autologin.sh
-
-Change the file from this;
-
-> #!/bin/bash
->
-> /bin/login -f root
-
-to look like this;
-
-> #!/bin/bash
->
-> #/bin/login -f root
->
-> /bin/login -f username
-
-Now we need to add the user to the list of users who can use sudo, to get root access.
-
-> nano /etc/sudoers
-
-Look for this line towards the bottom of the file;
-
-> root ALL=(ALL:ALL) ALL
-
-Right underneath it, add this line;
-
-> username ALL=(ALL:ALL) NOPASSWD: ALL
-
-Before the first reboot, we must add your user account to the video group, without doing this, none of the games will likely work.
-
-> nano /etc/group
-
-Look for this line;
-
-> video:x:28:
-
-and add your username to the line;
-
-> video:x:28:username
-
-Now reboot the system and you will be brought to a traditional Linux command line. If you need to run the command-launcher as root to do things like start the Wifi or the sound, run this command;
-
-> sudo su -
-
-Do that now and choose bash.sh from the menu and exectute these commands;
-
-> cp command-launcher/games/*.sh /usr/local/bin
->
-> cp command-launcher/net/*.sh /usr/local/bin
->
-> cp command-launcher/system/*.sh /usr/local/bin
->
-> cp command-launcher/wifi/*.sh /usr/local/bin
->
-> cp command-launcher/sound/*.sh /usr/local/bin
->
-> chown root:root /usr/local/bin/*.sh
-
-This will place the setup commands somewhere your user account can run them. You will need to fix wifi-up.sh so it properly calls sync-time.sh.
-
-> nano /usr/local/bin/wifi-up.sh
-
-Go to the last line and change;
-
-> ./sync-time.sh
-
-to
-
-> /usr/local/bin/sync-time.sh
-
-Now you need to update your path to include /usr/local/bin, and add a bit of color to your prompt with these commands.
-
-> echo 'PATH="/usr/bin:/usr/sbin:/usr/local/bin"' >> /etc/profile
->
-> echo 'export PATH' >> /etc/profile
->
-> echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '"  >> /etc/bash.bashrc
-
-Now it is time to reboot the system again. Type exit and press enter, you should go back to the command-launcher. Go down to system and press enter, then choose reboot.sh and press enter. The system should reboot and when it comes back up, you should be logged into you new user account. To connect to your network type "sudo wifi-up.sh" and press enter. You should be good to go.
-
