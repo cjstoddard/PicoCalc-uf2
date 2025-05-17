@@ -17,7 +17,7 @@ This is a list of programs that I have successfully installed along with instruc
 ---
 **Lyra Cross Compiler:**
 
-This is a guide to setting up and using the cross compiler enviroment on you desktop Linux machine.
+This is a guide to setting up and using the cross compiler enviroment on your desktop Linux machine.
 
 ---
 **Pi Zero Build Env:**
