@@ -4,15 +4,27 @@ Putting a Luckfox Lyra in a PicoCalc and installing PicoCalc Lyra Linux (PCL Lin
 
 With these pages, my goal is to help other people extend the usefulness of PCL Linux, because lets face it, the basic install is fairly limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a bit of work needs to be done.
 
-**Command Launcher Jailbreak:** Configure PCL Linux to boot into a proper linux user account and command line.
+---
+**Command Launcher Jailbreak:**
 
-**Known Working Programs:** This is a list of programs that I have successfully installed along with instructions for building and installing them.
+Configure PCL Linux to boot into a proper linux user account and command line.
 
-**Lyra Cross Compiler:** This is a guide to setting up and using the cross compiler enviroment on you desktop Linux machine.
+---
+**Known Working Programs:**
 
-**Pi Zero Build Env:** A Raspberry Pi Zero can be setup and used to build programs for PCL Linux, the advantage to this is the Raspberry Pi OS a much better toolchain and a wider array of development libraries.
+This is a list of programs that I have successfully installed along with instructions for building and installing them.
 
+---
+**Lyra Cross Compiler:**
 
+This is a guide to setting up and using the cross compiler enviroment on you desktop Linux machine.
+
+---
+**Pi Zero Build Env:**
+
+A Raspberry Pi Zero can be setup and used to build programs for PCL Linux, the advantage to this is the Raspberry Pi OS a much better toolchain and a wider array of development libraries.
+
+---
 Please check out my Ebook and RSS Feed readers, written specifically for PicoCalc's with the Lyra boards in mind.
 
 https://github.com/cjstoddard/PCL-Ebook-Reader
