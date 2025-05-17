@@ -25,6 +25,8 @@ This is a guide to setting up and using the cross compiler enviroment on your de
 A Raspberry Pi Zero can be setup and used to build programs for PCL Linux, the advantage to this is the Raspberry Pi OS a much better toolchain and a wider array of development libraries.
 
 ---
-Please check out my Ebook and RSS Feed readers, written specifically for PicoCalc's with the Lyra boards in mind.
+**Ebook Reader:**
 
-https://github.com/cjstoddard/PCL-Ebook-Reader
+This is an epub ebook reader and an RSS Feed reader I wrote specifically for the PCL Linux, targeting the 320x320 screen. 
+
+---
