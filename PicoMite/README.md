@@ -1,5 +1,8 @@
 # PicoMite Basic Projects
 
+Update 5-21-2025
+I added pipboy.bas and supporting files. This turns your PicoClac into a fun little cosplay accessory. It has its own README file with details.
+
 Update 4-30-2025
 I added Picogotchi.bas.This is a PicoMite Basic variant of my Micropython Tomato code. I actually like the way this works better than Tomato. Picogotchi does some base line system monitoring and then displays a little face that looks around and expresses moods. The SimulateWork() function is there just to have something to do. You should replace this function with something useful.
 
