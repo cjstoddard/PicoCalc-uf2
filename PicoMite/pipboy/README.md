@@ -1,14 +1,14 @@
-# PIP OS for the PcoCalc
+# PIP OS for the PicoCalc
 
-The idea for this program came from a cosplay prop I made for my wife a few years ago. Keep in mind, this is not designed to be a well thought out and easy to use UI. It is meant to emulate something designed in the Fallout world, which means it is not well thought out, often breaks, and usablity was not a concern.
+The idea for this program came from a cosplay prop I made for my wife a few years ago. Keep in mind, this is not designed to be a well thought out and easy to use UI. It is meant to emulate something designed in the Fallout world, which means it is not well thought out, often breaks, and usablity was not a concern. You can move through the screens with the left and right arrow keys, you can jump to screens using F1 - F4, and F5 exits the program.
 
 STAT:
 
-This screen gives youo some basic information about the PicoClac, battery percetage, free memory, IP Address and free spsce on the SD card. Please note that when the program first starts up after a reboot, it may take several seconds to finish, this is because it is determining the free space of the SD Card. You can move through the screans with the left and right arrow keys, you can jump to screens using F1 - F4, and F5 exits the program.
+This screen gives youo some basic information about the PicoClac, battery percentage, free memory, IP Address and free spsce on the SD card. Please note that when the program first starts up after a reboot, it may take several seconds to finish, this is because it is determining the free space of the SD Card. 
 
 INV:
 
-This simply displays the contents of a file named edit.txt. This file can contain anything you want, and can be edited by pressing ctrl-e. This involks pipedit.bas, which is a crude text editor, once you make the changes you want, ctrl-s saves the file and ctrl-q or ESC exits the program and puts you back in pipboy.bas. Please don't try to use pipedit for anything serious, and if you do, don't ask me for help with it, I will just tell you to use the PicoMite built in editor.
+This simply displays the contents of a file named edit.txt. This file can contain anything you want, and can be edited by pressing ctrl-e. This invokes pipedit.bas, which is a crude text editor, once you make the changes you want, ctrl-s saves the file and ctrl-q or ESC exits the program and puts you back in pipboy.bas. Please don't try to use pipedit for anything serious, and if you do, don't ask me for help with it, I will just tell you to use the PicoMite built in editor.
 
 DATA:
 
