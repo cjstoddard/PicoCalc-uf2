@@ -114,7 +114,10 @@ Sub StatScreen()
   Text 25,85, "Battery:",l
   Text 25,100,StrBattery$,l
 
+' If you are not using WebMite, comment out this line
   IPAddress$ = MM.Info(ip address)
+' and uncomment this line
+' IPAddress$ = "0.0.0.0"
   Text 25,185, "IP Adress:"
   Text 25,200,IPAddress$,l
 
