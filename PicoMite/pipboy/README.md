@@ -4,7 +4,7 @@ The idea for this program came from a cosplay prop I made for my wife a few year
 
 STAT:
 
-This screen gives youo some basic information about the PicoClac, battery percentage, free memory, IP Address and free spsce on the SD card. Please note that when the program first starts up after a reboot, it may take several seconds to finish, this is because it is determining the free space of the SD Card. 
+This screen gives you some basic information about the PicoClac, battery percentage, free memory, IP Address and free spsce on the SD card. Please note that when the program first starts up after a reboot, it may take several seconds to finish, this is because it is determining the free space of the SD Card. 
 
 INV:
 
@@ -16,7 +16,7 @@ This does nothing at the moment. I am taking ideas.
 
 RADIO:
 
-This is a crude MP3 player, it is hard coded to play specific files. The music in the folder are placeholder songs. On my PicoCalc I used music I got from Youtube, see below under Music. F6 - F9 lets you choose which MP3 to play, the keys used to play, stop, pause and resume are on the screen. If you must know, I chose those keys because they are the keybindings for cmus, an mp3 player I frequently us.
+This is a crude MP3 player, it is hard coded to play specific files. The music in the folder are placeholder songs. On my PicoCalc I used music I got from Youtube, see below under Music. F6 - F9 lets you choose which MP3 to play, the keys used to play, stop, pause and resume are on the screen. If you must know, I chose those keys because they are the keybindings for cmus, an mp3 player I frequently use.
 
 Music:
 
