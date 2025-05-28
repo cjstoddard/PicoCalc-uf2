@@ -118,7 +118,7 @@ Sub StatScreen()
   IPAddress$ = MM.Info(ip address)
 ' and uncomment this line
 ' IPAddress$ = "0.0.0.0"
-  Text 25,185, "IP Adress:"
+  Text 25,185, "IP Adress:",l
   Text 25,200,IPAddress$,l
 
   IntFreeMem = MM.Info(HEAP)
