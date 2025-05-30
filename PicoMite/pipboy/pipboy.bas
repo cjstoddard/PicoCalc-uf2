@@ -64,7 +64,6 @@ Do
     Case 5    ' Ctrl+E to launch pipedit
       IF ScreenChoice = 2 THEN
         RUN "pipedit.bas"
-        InvScreen() ' redraw after return
       ENDIF
    Case Else
      GoTo Skipper
