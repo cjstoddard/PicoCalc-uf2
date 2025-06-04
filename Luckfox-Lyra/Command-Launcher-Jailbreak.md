@@ -80,13 +80,30 @@ to
 
 > /usr/local/bin/sync-time.sh
 
-Now you need to update your path to include /usr/local/bin, and add a bit of color to your prompt with these commands.
+Now we need to make all your config files specific to your user account.
 
-> echo 'PATH="/usr/bin:/usr/sbin:/usr/local/bin"' >> /etc/profile
+> cp /etc/bash.bashrc ~/.bashrc
 >
-> echo 'export PATH' >> /etc/profile
+> cp /etc/profile ~/.profile
 >
-> echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '"  >> /etc/bash.bashrc
+> sudo cp /root/.fbtermrc ~/.fbtermrc
+>
+> sudo chown username:username ~/.fbtermrc
 
-Now it is time to reboot the system again. Type exit and press enter, you should go back to the command-launcher. Go down to system and press enter, then choose reboot.sh and press enter. The system should reboot and when it comes back up, you should be logged into you new user account. To connect to your network type "sudo wifi-up.sh" and press enter. You should be good to go.
+Next update your path to include /usr/local/bin, and add a bit of color to your prompt with these commands.
 
+> echo 'PATH="/usr/bin:/usr/sbin:/usr/local/bin"' >> ~/.profile
+>
+> echo 'export PATH' >> ~/.profile
+>
+> echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '"  >> ~/.bashrc
+
+Now it is time to reboot the system again. Type exit and press enter, you should go back to the command-launcher. Go down to system and press enter, then choose reboot.sh and press enter. The system should reboot and when it comes back up, you should be logged into you new user account. To connect to your network type ."sudo wifi-up.sh", press enter, then "fbterm" and press enter. You should be good to go. I put both of those commands into a shell script that I run after I have booted the PicoCalc.
+
+> #onboot.sh
+>
+> #!/usr/bin/bash
+>
+> sudo wifi-up.sh
+>
+>fbterm
