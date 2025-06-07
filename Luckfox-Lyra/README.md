@@ -5,6 +5,11 @@ Putting a Luckfox Lyra in a PicoCalc and installing PicoCalc Lyra Linux (PCL Lin
 With these pages, my goal is to help other people extend the usefulness of PCL Linux, because lets face it, the basic install is fairly limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a bit of work needs to be done.
 
 ---
+**Build you own image**
+
+This is a one stop page for building your own Linux image for a PicoCalc with the Lyra Mod.
+
+---
 **Command Launcher Jailbreak:**
 
 Configure PCL Linux to boot into a proper linux user account and command line.
