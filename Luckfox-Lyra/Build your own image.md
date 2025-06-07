@@ -4,12 +4,7 @@ This is a high level overview of building your own Linux image for a PicoCalc wi
 
 The first thing you need to do is either install Ubuntu 22.04 on a computer or a Virtual Machine. I am not going go into detail on this. You have to use Ubuntu 22.04 because the build requires Python 2, which is obsolete and is not available in most newer Linux distributions. I hope at some point Luckfox fixes this, but I am not holding my breath or making any bets on it. Once you have Ubuntu 22.04 installed and updated, you will need to install some software.
 
-> sudo apt install git ssh make gcc libssl-dev liblz4-tool expect \
-> expect-dev g++ patchelf chrpath gawk texinfo chrpath diffstat \
-> binfmt-support qemu-user-static live-build bison flex fakeroot cmake \
-> gcc-multilib g++-multilib unzip device-tree-compiler ncurses-dev \
-> libgucharmap-2-90-dev bzip2 expat gpgv2 cpp-aarch64-linux-gnu libgmp-dev \
-> libmpc-dev bc python-is-python3 python2 
+> sudo apt install git ssh make gcc libssl-dev liblz4-tool expect expect-dev g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilib unzip device-tree-compiler ncurses-dev libgucharmap-2-90-dev bzip2 expat gpgv2 cpp-aarch64-linux-gnu libgmp-dev libmpc-dev bc python-is-python3 python2 
 
 Then you will need to make Python2 the default Python.
 
