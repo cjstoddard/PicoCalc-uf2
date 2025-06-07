@@ -38,7 +38,7 @@ DOSBOXPURE if enabled will cause the build to fail, so you need to disable it.
 
 > sed -i 's/BR2_PACKAGE_LIBRETRO_DOSBOXPURE=y/# BR2_PACKAGE_LIBRETRO_DOSBOXPURE=y/g' ~/Lyra-sdk/picocalc-luckfox-lyra/src/buildroot/configs/rockchip_rk3506_picocalc_luckfox_defconfig
 
-This is optional, I don't play games so I disbale RETROARCH. If you want it, skip this step.
+This is optional, I don't play games so I disable RETROARCH. If you want it, skip this step.
 
 > sed -i 's/BR2_PACKAGE_RETROARCH=y/# BR2_PACKAGE_RETROARCH=y/g' ~/Lyra-sdk/picocalc-luckfox-lyra/src/buildroot/configs/rockchip_rk3506_picocalc_luckfox_defconfig
 
