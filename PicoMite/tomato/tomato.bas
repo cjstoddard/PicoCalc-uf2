@@ -73,7 +73,11 @@ Sub CollectInfo()
   IntBattery = MM.Info(battery)
   info$(0) = "Battery: " + Str$(IntBattery) + "%    "
 
+  On Error Ignore
   IPAddress$ = MM.Info(ip address)
+  If IPAddress$ = "" Then
+    IPAddress$ = "0.0.0.0"
+  Endif
   info$(1) = "IP: " + IPAddress$
 
   IntFreeMem = Int(MM.Info(HEAP)/1024)

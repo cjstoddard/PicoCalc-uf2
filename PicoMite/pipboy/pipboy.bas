@@ -113,12 +113,17 @@ Sub StatScreen()
   Text 25,85, "Battery:",l
   Text 25,100,StrBattery$,l
 
-' If you are not using WebMite, comment out this line
+  On Error Ignore
   IPAddress$ = MM.Info(ip address)
-' and uncomment this line
-' IPAddress$ = "0.0.0.0"
-  Text 25,185, "IP Adress:",l
-  Text 25,200,IPAddress$,l
+  If IPAddress$ = "" Then
+    IPAddress$ = "0.0.0.0"
+  Endif
+  Text 130,50, "IP Adress:"
+  Text 130,65, IPAddress$,l
+
+  TimeUp$ = Str$(Int(MM.Info(uptime)/60)
+  Text 25,185, "Uptime:"
+  Text 25,200, TimeUp$,l
 
   IntFreeMem = MM.Info(HEAP)
   IntFreeMem = Int(IntFreeMem/1024)
