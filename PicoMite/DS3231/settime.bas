@@ -11,12 +11,17 @@ SetPin GP4, GP5, I2C
 
 getRTCtime
 
+Print "===================="
 Print RTCtime$
 Time$ = RTCtime$
-print RTCdate$
+Print RTCdate$
 Date$ = RTCdate$
+Print "===================="
+Drive "b:"
+Print "Defaulting to drive B:"
+Print "===================="
 
-end
+End
 
 Sub getRTCtime
   LOCAL RTCsec$,RTCmin$,RTChr$,RTCwday$,RTCday$,RTCmon$,RTCyr$
