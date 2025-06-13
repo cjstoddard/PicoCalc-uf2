@@ -1,5 +1,9 @@
 # PicoMite Basic Projects
 
+Update 6-12-2025
+
+Added the DS3231 folder with programs to manage a DS3231 RTC mounted externally on a PicoCalc.
+
 Update 5-28-2025
 
 Added tomato.bas, a better version of Picogotchi. It has assets its needs to run and has its own readme file.
