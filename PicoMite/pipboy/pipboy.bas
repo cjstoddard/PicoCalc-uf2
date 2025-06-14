@@ -118,10 +118,10 @@ Sub StatScreen()
   If IPAddress$ = "" Then
     IPAddress$ = "0.0.0.0"
   Endif
-  Text 130,50, "IP Adress:"
-  Text 130,65, IPAddress$,l
+  Text 120,50, "IP Adress:"
+  Text 120,65, IPAddress$,l
 
-  TimeUp$ = Str$(Int(MM.Info(uptime)/60)
+  TimeUp$ = Str$(Int(MM.Info(uptime)/60)) + " Minutes"
   Text 25,185, "Uptime:"
   Text 25,200, TimeUp$,l
 
