@@ -11,15 +11,17 @@ SetPin GP4, GP5, I2C
 
 getRTCtime
 
-Print "===================="
-Print RTCtime$
+CLS
+Print
+Print "--------------------"
 Time$ = RTCtime$
-Print RTCdate$
 Date$ = RTCdate$
-Print "===================="
+Print "Current Date and Time"
+Print Date$ ; "@" ; Time$
+Print "--------------------"
 Drive "b:"
-Print "Defaulting to drive B:"
-Print "===================="
+Print "Defaulting to B: drive"
+Print "--------------------"
 
 End
 
