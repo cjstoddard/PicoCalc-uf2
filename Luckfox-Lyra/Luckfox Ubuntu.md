@@ -22,13 +22,13 @@ Once you have installed the cable and wifi dongle, you will need to compile and 
 
 Then follow the menu into Device Drivers > Network device support > Wireless LAN, and enabled Realtek devices, I also set “Realtek 8187 and 8187B support” and “Realtek rtlwifi family of devices” to build as modules, then saved the config and exited. After that I ran;
 
-> sudo make -j3 modules_prepare; sudo make -j3 modules; sudo make -j3 modules_install; sudo depmod -a
+> sudo make modules; sudo make modules_install
 
 Once that is done, you can then go build the wireless drivers that are actually needed.
 
 > cd /home/lyra/wireless/rtw88
 >
-> sudo make -j3 install
+> sudo make install
 >
 > sudo make install_fw
 >
