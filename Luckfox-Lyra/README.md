@@ -18,6 +18,10 @@ Configure PCL Linux to boot into a proper linux user account and command line.
 **Known Working Programs:**
 
 This is a list of programs that I have successfully installed along with instructions for building and installing them.
+---
+**Luckfox Ubuntu:**
+
+This page is about tgetting the Lyra Ubuntu image up and running.
 
 ---
 **Lyra Cross Compiler:**
