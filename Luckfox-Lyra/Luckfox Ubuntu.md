@@ -89,7 +89,7 @@ The last thing I did was change the console font to make things easier to read.
 - Choose "UTF-8" and press enter.
 - Choose "Guess optimal character set" and press enter.
 - press enter after reading the dialog.
-- Unless you have a specific preferance on the list, chhose "Let system choose suitable font" and press enter.
+- Unless you have a specific preferance on the list, choose "Let system choose suitable font" and press enter.
 - Again, unless you have a specific preferance, choose "6x12 (framebuffer only)" and press enter.
 
 Give it a minute finish and when it drops to the command prompt, it should be much easier to read.
