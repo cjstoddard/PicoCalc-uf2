@@ -1,8 +1,8 @@
 # PicoCalc Lyra Linux
 
-Putting a Luckfox Lyra in a PicoCalc and installing PicoCalc Lyra Linux (PCL Linux) is one of the more interesting and flexible modifications you can make to a PicoCalc. Using this tinu Linux environment, lets you do pretty much everything you would want to do with the PicoCalc, without having to flash the device.
+If you are here looking for advice on using the PicoCalc with a Luckfox Lyra, my first huge piece of advice is skip straight to the Luckfox Ubuntu page and ignore everything else. The Ubuntu image is reasonably easy to get into a usable state. The hisptoot image is a serious pain in the ass, I would not recomend it unless you have a very specific use case for it.
 
-With these pages, my goal is to help other people extend the usefulness of PCL Linux, because lets face it, the basic install is fairly limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a bit of work needs to be done.
+The other pages are all about getting Hisptoot's PicoCalc Lyra Linux (PCL Linux) image into a usable state and, extend the usefulness of PCL Linux, because lets face it, the basic install is very limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a lot of work needs to be done.
 
 ---
 **Build you own image**
