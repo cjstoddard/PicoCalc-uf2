@@ -5,7 +5,7 @@ If you are here looking for advice on using the PicoCalc with a Luckfox Lyra, my
 The other pages are all about getting Hisptoot's PicoCalc Lyra Linux (PCL Linux) image into a usable state and, extend the usefulness of PCL Linux, because lets face it, the basic install is very limited. If all you want to do is play some retro games and program in Python, it is probably fine. However if you want to do other things, a lot of work needs to be done.
 
 ---
-**Build you own image**
+**Build you own image:**
 
 This is a one stop page for building your own Linux image for a PicoCalc with the Lyra Mod.
 
