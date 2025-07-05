@@ -48,9 +48,9 @@ If you are not sure what to delete, just delete everything in the file, then sav
 
 The next step is to create a new user for yourself. This will add a user and put the user in the sudo group.
 
-> sudo adduser <username>
+> sudo adduser username
 >
-> sudo usermod -a -G sudo <username>
+> sudo usermod -a -G sudo username
 
 Once this is done, log out and log back into your new user account.
 
