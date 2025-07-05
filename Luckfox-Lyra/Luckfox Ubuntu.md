@@ -80,4 +80,16 @@ After that it is just a matter of installing the software you need, adjust to ta
 
 > sudo apt install links cmus tty-clock calcurse emacs-nox sc tpp wordgrinder alpine -y
 
+The last thing I did was change the console font to make things easier to read.
 
+> sudo apt install console-setup
+>
+> sudo dpkg-reconfigure console-setup
+
+- Choose "UTF-8" and press enter.
+- Choose "Guess optimal character set" and press enter.
+- press enter after reading the dialog.
+- Unless you have a specific preferance on the list, chhose "Let system choose suitable font" and press enter.
+- Again, unless you have a specific preferance, choose "6x12 (framebuffer only)" and press enter.
+
+Give it a minute finish and when it drops to the command prompt, it should be much easier to read.
