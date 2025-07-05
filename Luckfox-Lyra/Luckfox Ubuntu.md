@@ -15,7 +15,16 @@ Unfortunately, this image does not come with much in the way of wifi drivers, th
 
 [TP-Link Nano](https://www.amazon.com/dp/B0BJ7XJ27X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 
-Once you have installed the cable and wifi dongle, you will need to compile and install the driver. In the lyra user folder, there is a wireless folder which contains what you need.
+Once you have installed the cable and wifi dongle, you will need to compile and install the driver. In the lyra user folder, there is a wireless folder which contains what you need. First you will need to get the kernel headers and some sym links into the right place, is done by the following;
+
+> cd /usr/src/linux-6.1.99
+> sudo make menuconfig
+
+Then follow the menu into Device Drivers > Network device support > Wireless LAN, and enabled Realtek devices, I also set “Realtek 8187 and 8187B support” and “Realtek rtlwifi family of devices” to build as modules, then saved the config and exited. After that I ran;
+
+> sudo make -j3 modules_prepare; sudo make -j3 modules; sudo make -j3 modules_install; sudo depmod -a
+
+Once that is done, you can then go build the wireless drivers that are actually needed.
 
 > cd /home/lyra/wireless/rtw88
 >
