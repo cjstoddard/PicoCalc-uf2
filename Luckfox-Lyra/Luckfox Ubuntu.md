@@ -28,7 +28,7 @@ Once that is done, you can then go build the wireless drivers that are actually 
 
 > cd /home/lyra/wireless/rtw88
 >
-> sudo make install
+> sudo make -j3 install
 >
 > sudo make install_fw
 >
