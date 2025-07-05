@@ -8,7 +8,7 @@ https://github.com/markbirss/ubuntu-24.04.2-picocalc
 
 Username: lyra Password: luckfox
 
-Unfortunately, this image does not come with much in the way of wifi drivers, the board does not even have wireless to begin with. This is a very solvable problem. These two items will allow you to provide both wireless and bluetooth to the device. This fits nicely inside the case and does not require and soldering.
+Unfortunately, this image does not come with much in the way of wifi drivers, the board does not even have wireless to begin with. This is a very solvable problem. These two items will allow you to provide both wireless and bluetooth to the device. This fits nicely inside the case and does not require any soldering.
 
 [MX1.25 4Pin to USB Cable](https://www.amazon.com/dp/B0DRD5792W?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
