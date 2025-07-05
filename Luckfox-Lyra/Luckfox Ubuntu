@@ -1,0 +1,74 @@
+# Luckfox Ubuntu
+
+Since I got my second PicoCalc, I have been using a Lucjfox Lyra in it. Originally I used the Hisptoot image. This image is a serious pain in the butt to get working the way I wanted it to work. It lacks just about everything I needed to have a usable hand terminal. Most software needed to be compiled from source and the image had a very lackluster set of tools to do that forcing me to use a couple of work a arounds. On top of that, I had to jailbreak it out of a command-launcher and that just anooyed me. A couple of weeks ago a new image was realsed by Markbliss, which sloved all the issues I had with the first image. If you are going to use a Luckfox Lyra in a PicoCalc, the Ubuntu image is the way to go.
+
+
+You can get the image for Ubuntu Image for a Luckfox Lyra, installed in a Pico Calc, here;
+
+https://github.com/markbirss/ubuntu-24.04.2-picocalc
+
+Username: lyra Password: luckfox
+
+Unfortunately, this image does not come with much in the way of wifi drivers, the board does not even have wireless to begin with. This is a very solvable problem. These two items will allow you to provide both wireless and bluetooth to the device. This fits nicely inside the case and does not require and soldering.
+
+[MX1.25 4Pin to USB Cable](https://www.amazon.com/dp/B0DRD5792W?ref=ppx_yo2ov_dt_b_fed_asin_title)
+
+[TP-Link Nano](https://www.amazon.com/dp/B0BJ7XJ27X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+
+Once you have installed the cable and wifi dongle, you will need to compile and install the driver. In the lyra user folder, there is a wireless folder which contains what you need.
+
+> cd /home/lyra/wireless/rtw88
+>
+> sudo make install
+>
+> sudo make install_fw
+>
+> sudo mkdir -p /lib/firmware/rtw88
+>
+> sudo  cp /lib/other/firmware/rtw88/* /lib/firmware/rtw88/
+>
+> sudo reboot
+
+Once you have rebooted, run nmtui to connect to your wireless network.
+
+The next thing I would do is get rid of that Luckfox logo the vomits all over the screen when you log in.
+
+> sudo nano /etc/update-motd.d/00-header
+
+If you are not sure what to delete, just delete everything in the file, then save and exit.
+
+The next step is to create a new user for yourself. This will add a user and put the user in the sudo group.
+
+> sudo adduser <username>
+>
+> sudo usermod -a -G sudo <username>
+
+Once this is done, log out and log back into your new user account.
+
+The next thing to do is test everything by updating the system software.
+
+> sudo apt update
+>
+> sudo apt upgrade -y
+>
+> sudo apt autoremove -y
+>
+> sudo apt clean
+
+You can now delete the lyra user account, this frees up some drive space for you.
+
+> sudo userdel -r lyra
+
+I personally did not need the meshtastic or the speedstest software, if you do not need it either, you can remove it;
+
+> sudo apt remove meshtasticd speedtest-cli
+>
+> sudo rm /etc/apt/sources.list.d/mesh*
+>
+> sudo rm /etc/apt/sources.list.d/ook*
+
+After that it is just a matter of installing the software you need, adjust to taste.
+
+> sudo apt install links cmus tty-clock calcurse emacs-nox sc tpp wordgrinder alpine -y
+
+
