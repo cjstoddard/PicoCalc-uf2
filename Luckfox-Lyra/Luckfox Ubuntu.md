@@ -95,3 +95,7 @@ The last thing I did was change the console font to make things easier to read.
 - Again, unless you have a specific preferance, choose "6x12 (framebuffer only)" and press enter.
 
 Give it a minute finish and when it drops to the command prompt, it should be much easier to read.
+
+Notes about sound:
+
+The best way to get sound, is to do a hardware modification to the Lyra. If you are interested in doing this modification, there is plenty of information on the PicoCalc Forum on how to do it, I have not and probably will not do it, so you are kind of on your own on that. There is a software sound driver availble and I did mess around with that, however the sound quality was terrible and basically unusable. Working audio is not a deal breaker for me, I am not a game player and I have plenty of other ways to listen to music. Honestly, my recomendation is unless you have a specific reason for wanting audio, is to uninstall Pulseaudio and be done with it. If you do want audio, then do the hardware mod.
