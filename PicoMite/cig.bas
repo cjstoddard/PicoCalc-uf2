@@ -1,4 +1,6 @@
-' smoking_cigarette_aligned.bas  (PicoMite MMBasic on PicoCalc)
+'cig.bas
+' Code by Chris Stoddard
+
 OPTION EXPLICIT
 RANDOMIZE TIMER
 
