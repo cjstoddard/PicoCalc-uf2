@@ -1,5 +1,9 @@
 # PicoMite Basic Projects
 
+Update 9-12-2025
+
+Added cig.bas. Many years ago, 1985 or 1986, I had an Apple Machintosh with MacBasic. In one of the books I had for it, there was a smoking cigerette program. Something made me think about that program this morning, so I sat down and banged out my own version. It does not do anything useful, it is just a demo.
+
 Update 6-12-2025
 
 Added the DS3231 folder with programs to manage a DS3231 RTC mounted externally on a PicoCalc.
