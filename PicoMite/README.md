@@ -1,5 +1,9 @@
 # PicoMite Basic Projects
 
+Update 9-22-2025
+
+Added pico-edit.bas. This was the program I was not going to write, but it seems like there is some desire for a text editor or word processor on the PicoCalc. This is an extension of pipedit.bas, it adds Open/Save file functionality, Copy/Cut/Paste to and from the clipboard and a help screen invoked with Ctrl-L. Personally, I would suggest using the built in editor, but if you want something you can build up yourself, here you go.
+
 Update 9-21-2025
 
 I added updated versions of the programs from Creating Adventure Games on Your Computer by Tim Hartnell.
