@@ -182,6 +182,7 @@ Sub DataScreen()
   Text 195,14,"Data",c,,,BLK,GRN
   Box 235,10,60,20
   Text 265,14,"Radio",c
+  Load jpg "assets/world-map.jpg",30,35
 
 End Sub
 
