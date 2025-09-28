@@ -1,5 +1,9 @@
 # PicoMite Basic Projects
 
+Updated 9-27-2025
+
+I added eliza.bas, originally published in Creative Computing July-August issue, I have updated it, removing line numbers and such. For many of my generation, this was our first exposure to A.I. and chatbots.
+
 Update 9-22-2025
 
 Added pico-edit.bas. This was the program I was not going to write, but it seems like there is some desire for a text editor or word processor on the PicoCalc. This is an extension of pipedit.bas, it adds Open/Save file functionality, Copy/Cut/Paste to and from the clipboard and a help screen invoked with Ctrl-L. Personally, I would suggest using the built in editor, but if you want something you can build up yourself, here you go.
