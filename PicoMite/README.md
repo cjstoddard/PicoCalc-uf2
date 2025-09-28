@@ -2,7 +2,7 @@
 
 Updated 9-27-2025
 
-I added eliza.bas, originally published in Creative Computing July-August issue, I have updated it, removing line numbers and such. For many of my generation, this was our first exposure to A.I. and chatbots.
+I added eliza.bas, originally published in Creative Computing July-August 1977 issue, I have updated it, removing line numbers and such. For many of my generation, this was our first exposure to A.I. and chatbots.
 
 Update 9-22-2025
 
