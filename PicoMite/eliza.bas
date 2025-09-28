@@ -62,7 +62,6 @@ FUNCTION ReplaceAll$(text$, target$, replacement$)
   ReplaceAll$ = work$
 END FUNCTION
 
-' Swap a$ <-> b$ safely (no double-swap)
 FUNCTION ReplacePairwise$(text$, a$, b$)
   LOCAL tmp$
   tmp$ = ReplaceAll$(text$, a$, "#PAIR_A#")
@@ -72,7 +71,6 @@ FUNCTION ReplacePairwise$(text$, a$, b$)
   ReplacePairwise$ = tmp$
 END FUNCTION
 
-' Apply all conjugation swaps on the right-hand fragment
 FUNCTION ConjugateFragment$(fragment$)
   LOCAL out1$, i%
   out1$ = fragment$
@@ -130,7 +128,6 @@ SUB RespondToKeyword(keywordIndex%, normalizedInput$, hitPos%)
   LOCAL reply$, rhsFragment$, keyToken$, idx%
   idx% = ReplyCurrentIndex(keywordIndex%)
 
-  ' rotate pointer for next time
   ReplyCurrentIndex(keywordIndex%) = ReplyCurrentIndex(keywordIndex%) + 1
   IF ReplyCurrentIndex(keywordIndex%) > ReplyEndIndex(keywordIndex%) THEN
     ReplyCurrentIndex(keywordIndex%) = ReplyStartIndex(keywordIndex%)
@@ -161,7 +158,6 @@ DO
     END
   ENDIF
 
-  ' emulate classic padding; strip apostrophes
   userRaw$ = " " + userRaw$ + "  "
   userRaw$ = RemoveApostrophes$(userRaw$)
 
@@ -174,7 +170,7 @@ DO
 
   keywordIndex% = FindKeywordIndex%(normalized$, keywordPos%)
   IF keywordIndex% = 0 THEN
-    keywordIndex% = KEYWORD_COUNT        ' use NOKEYFOUND bucket
+    keywordIndex% = KEYWORD_COUNT
     keywordPos% = LEN(normalized$)
   ENDIF
 
@@ -192,7 +188,6 @@ DATA " NO","YOUR","ALWAYS","THINK","ALIKE","YES","FRIEND"
 DATA "COMPUTER","NOKEYFOUND"
 
 ConjugationsData:
-' Keep spaces so swaps hit whole tokens only
 DATA " ARE "," AM ","WERE ","WAS "," YOU "," I ","YOUR ","MY "
 DATA " IVE "," YOUVE "," IM "," YOURE "
 
