@@ -1,5 +1,5 @@
 'eliza.bas
-' Original program by Joeseph Weizenbaum, 1967
+' Original program by Joseph Weizenbaum, 1967
 ' Ported to Basic by Jeff Shrager, 1977
 ' Updated by Chris Stoddard
 
