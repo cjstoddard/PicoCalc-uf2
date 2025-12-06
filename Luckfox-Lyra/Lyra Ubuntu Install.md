@@ -7,21 +7,21 @@ First things first, lets install the needed software.
 Next download the image, this takes a few minutes, so be patient.
 
 > git clone https://github.com/markbirss/ubuntu-24.04.2-picocalc.git
-
+>
 > cd ubuntu-24.04.2-picocalc
-
+>
 > rm -fr .git/
-
+>
 > cd image
-
+>
 > 7z x image.7z.001
 
 Download the upgrade tool.
 
 > wget https://files.luckfox.com/wiki/Core3566/upgrade_tool_v2.17.zip
-
+>
 > unzip -j upgrade_tool_v2.17.zip upgrade_tool_v2.17_for_linux/upgrade_tool
-
+>
 > chmod +x upgrade_tool
 
 Insert your SD card in the Lyra, then hold down the BOOT button on the Lyra and plug it in. Give it a moment and then test to make sure the Lyra is being seen by the tool.
