@@ -32,11 +32,11 @@ You should get output something like this.
 
 > DevNo=1	Vid=0x2207,Pid=0x350f,LocationID=132	Mode=Loader	SerialNo=
 
-Next we need to earase the flash. This step generates some weird messages, but seems to work regardless.
+Next we need to erase the flash. This step generates some weird messages, but seems to work regardless.
 
 > sudo ./upgrade_tool EF MiniLoaderAll.bin
 
-Next we need to chage the active storage device to the SD card.
+Next we need to change the active storage device to the SD card.
 
 > sudo ./upgrade_tool SSD
 
@@ -44,6 +44,8 @@ Choose 2, I know it says EMMC, it is wrong, it is the SD Card. Now we can write 
 
 > sudo ./upgrade_tool uf update.img 
 
-Once it is finished, it should reboot. If your Lyra is installed in your PicoCal, you should see the boot process start. If you did this before installing the Lyra, give it a couple of minutes to finish the boot process, then use adb to make sure everything worked.
+Once it is finished, it should reboot. If your Lyra is installed in your PicoCalc, you should see the boot process start. If you did this before installing the Lyra, give it a couple of minutes to finish the boot process, then use adb to make sure everything worked.
 
 > adb shell
+
+If all went well you should see the Lyra shell prompt.
