@@ -26,7 +26,7 @@ Download the upgrade tool.
 >
 > chmod +x upgrade_tool
 
-Insert your SD card in the Lyra, then hold down the BOOT button on the Lyra and plug it in. Give it a moment and then test to make sure the Lyra is being seen by the tool.
+Insert your SD card in the Lyra, then press and hold the BOOT button and plug it in, then let go of the button. Give it a moment and then test to make sure the Lyra is being seen by the tool.
 
 > ./upgrade_tool LD 
 
@@ -42,7 +42,15 @@ Next we need to change the active storage device to the SD card.
 
 > sudo ./upgrade_tool SSD
 
-Choose 2, I know it says EMMC, it is wrong, it is the SD Card. Now we can write Ubuntu image to the SD card.
+Choose 2, I know it says EMMC, it is wrong, it is the SD Card. If this fails, unplug the Lyra, press and hold the BOOT button and plug it in, then let go of the button. Now try to flash the Ubuntu image.
+
+> sudo ./upgrade_tool uf update.img 
+
+This likely will fail, telling you the storage is too small. Now try the command again.
+
+> sudo ./upgrade_tool SSD
+
+Choose 2, and now we can write Ubuntu image to the SD card.
 
 > sudo ./upgrade_tool uf update.img 
 
