@@ -26,7 +26,7 @@ Download the upgrade tool.
 >
 > chmod +x upgrade_tool
 
-Insert your SD card in the Lyra, then press and hold the BOOT button and plug it in, then let go of the button. Give it a moment and then test to make sure the Lyra is being seen by the tool.
+Insert a FAT32 formatted SD card in the Lyra, then press and hold the BOOT button and plug it in, then let go of the button. Give it a moment and then test to make sure the Lyra is being seen by the tool.
 
 > ./upgrade_tool LD 
 
