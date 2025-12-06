@@ -15,6 +15,8 @@ Next download the image, this takes a few minutes, so be patient.
 > cd image
 >
 > 7z x image.7z.001
+>
+> cd '[18Jun2025]'
 
 Download the upgrade tool.
 
