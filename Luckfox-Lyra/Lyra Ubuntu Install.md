@@ -1,3 +1,5 @@
+# Installing Ubuntu on the Luckfox Lyra
+
 I have been asked to do a step by step guide to writing the Ubuntu image to the SD card. This proceedure is really more complicated than it needs to be, but here it is. First, I use Debian Linux 13, this works on Debian 12 as well. It should work on any recent version of Ubuntu as well.
 
 First things first, lets install the needed software.
@@ -8,11 +10,7 @@ Next download the image, this takes a few minutes, so be patient.
 
 > git clone https://github.com/markbirss/ubuntu-24.04.2-picocalc.git
 >
-> cd ubuntu-24.04.2-picocalc
->
-> rm -fr .git/
->
-> cd image
+> cd ubuntu-24.04.2-picocalc/image
 >
 > 7z x image.7z.001
 >
