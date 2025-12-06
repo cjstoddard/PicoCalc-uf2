@@ -50,7 +50,7 @@ This likely will fail, telling you the storage is too small. Now try the command
 
 > sudo ./upgrade_tool SSD
 
-Choose 2, and now we can write Ubuntu image to the SD card.
+Choose 2, and now we can write Ubuntu image to the SD card. (Note: I have no idea why this happens, all I know is if it does happen, this is how you work around it.)
 
 > sudo ./upgrade_tool uf update.img 
 
