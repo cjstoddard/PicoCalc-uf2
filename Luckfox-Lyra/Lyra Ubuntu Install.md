@@ -56,4 +56,4 @@ Once it is finished, it should reboot. If your Lyra is installed in your PicoCal
 
 > adb shell
 
-If all went well you should see the Lyra shell prompt.
+If all went well you should see the Lyra shell prompt. Either way, welcome back to 1995 computing.
