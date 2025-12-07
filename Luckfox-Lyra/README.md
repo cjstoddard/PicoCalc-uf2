@@ -30,6 +30,11 @@ This page is about tgetting the Lyra Ubuntu image up and running.
 This is a guide to setting up and using the cross compiler enviroment on your desktop Linux machine.
 
 ---
+**Lyra Ubuntu Install:**
+
+This is a walk through for getting the Lyra Ubuntu image onto an SD card using Debian or Ubuntu Linux. I tried to include some work arounds for possible problems along the way.
+
+---
 **Pi Zero Build Env:**
 
 A Raspberry Pi Zero can be setup and used to build programs for PCL Linux, the advantage to this is the Raspberry Pi OS a much better toolchain and a wider array of development libraries.
