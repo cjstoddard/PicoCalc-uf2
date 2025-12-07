@@ -1,6 +1,6 @@
 # Installing Ubuntu on the Luckfox Lyra
 
-I have been asked to do a step by step guide to writing the Ubuntu image to the SD card. This proceedure is really more complicated than it needs to be, but here it is. First, I use Debian Linux 13, this works on Debian 12 as well. It should work on any recent version of Ubuntu as well.
+I have been asked to do a step by step guide to writing the Ubuntu image to the SD card. This proceedure is really more complicated than it needs to be, but here it is. I use Debian Linux 13, I have verified this works on Debian 12. I have not verified it, this process should work on any recent version of Ubuntu (22.04 or later) as well.
 
 First things first, lets install the needed software.
 
