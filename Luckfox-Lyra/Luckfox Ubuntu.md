@@ -2,9 +2,9 @@
 
 Since I got my second PicoCalc, I have been using a Luckfox Lyra in it. Originally I used the Hisptoot image. This image is a serious pain in the butt to get working the way I wanted it to work. It lacks just about everything I needed to have a usable hand terminal. Most software needed to be compiled from source and the image had a very lackluster set of tools to do that forcing me to use a couple of work a arounds. On top of that, I had to jailbreak it out of a command-launcher and that just anooyed me. A couple of weeks ago a new image was realsed by Markbliss, which solved all the issues I had with the first image. If you are going to use a Luckfox Lyra in a PicoCalc, the Ubuntu image is the way to go.
 
-You can get the image for Ubuntu Image for a Luckfox Lyra, installed in a Pico Calc, here;
+Instructions for getting Ubuntu installed on the Luckfox Lyra can be found here;
 
-https://github.com/markbirss/ubuntu-24.04.2-picocalc
+https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Lyra%20Ubuntu%20Install.md
 
 Username: lyra Password: luckfox
 

@@ -56,4 +56,8 @@ Once it is finished, it should reboot. If your Lyra is installed in your PicoCal
 
 > adb shell
 
-If all went well you should see the Lyra shell prompt. Either way, welcome back to 1995 computing.
+If all went well you should see the Lyra shell prompt. To get everything into a more usable state, including wifi, you can goto this page;
+
+https://github.com/cjstoddard/PicoCalc-uf2/blob/main/Luckfox-Lyra/Luckfox%20Ubuntu.md
+
+Welcome back to 1995 computing.
