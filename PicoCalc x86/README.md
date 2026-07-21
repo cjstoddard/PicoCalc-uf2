@@ -3,12 +3,15 @@
 ## Links
 
 The project
+
 https://github.com/shtirlic/picocalc_x86
 
 MS-DOS 6.22 Full install (You will need 7zip to extract the images)
+
 https://winworldpc.com/download/c38fc38d-68c2-bbe2-80a6-4b11c3a4c2ac
 
 DOSBox-x
+
 https://dosbox-x.com/
 
 ## Build Image instructions
@@ -22,6 +25,7 @@ Make a new folder somehwere easy for you to find, name it DOSBox-hd. The copy th
 Run DOSBox, from the dropdown menu, click on "Drive", go down to D"", and choose "Mount Folder as Hard Drive". Then go choose the DOSBox-hd folder you just made. It should now be the D: drive in DOSBox. Switch drives to D:, and type dir, you should see the disk images files.
 
 > d:
+
 > dir
 
 Still in the DOS prompt, you want to make your new disk image with the following command;
